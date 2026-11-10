@@ -124,7 +124,19 @@ section{padding:72px 0}
 .why p{color:var(--slate);font-size:14.5px}
 
 /* ===== Applications ===== */
-.apps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+/* ===== Slider ===== */
+.slider{position:relative;padding:0 46px}
+.slider-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 14px;scrollbar-width:none;cursor:grab;user-select:none;-webkit-user-select:none}
+.slider-track::-webkit-scrollbar{display:none}
+.slider-track.dragging{cursor:grabbing;scroll-snap-type:none}
+.slider-track .app{flex:0 0 calc((100% - 64px)/5);scroll-snap-align:start}
+.slider-btn{position:absolute;top:38%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-lg);font-size:22px;line-height:1;color:var(--ink);cursor:pointer;z-index:5;display:flex;align-items:center;justify-content:center;transition:.15s;padding-bottom:3px}
+.slider-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.slider-btn.prev{left:0}
+.slider-btn.next{right:0}
+.slider-dots{display:flex;gap:8px;justify-content:center;margin-top:8px}
+.slider-dots button{width:9px;height:9px;border-radius:999px;border:none;background:#cbd5e1;cursor:pointer;padding:0;transition:.2s}
+.slider-dots button.on{background:var(--blue);width:26px}
 .app{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 14px;text-align:center;box-shadow:var(--shadow);transition:transform .15s}
 .app:hover{transform:translateY(-3px)}
 .app .ico{font-size:30px;margin-bottom:8px}
@@ -190,7 +202,7 @@ footer .brand small{color:#94a3b8}
   .hero-grid,.about-grid,.contact-grid,.family-strip{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .products-grid,.why-grid,.d1-grid{grid-template-columns:1fr}
-  .apps-grid{grid-template-columns:repeat(3,1fr)}
+  .slider{padding:0 40px}.slider-track .app{flex-basis:calc((100% - 32px)/3)}
   .partner-grid{grid-template-columns:1fr}
   .hero-visual{order:-1}
   .chip-1{left:6px}.chip-2{right:6px}
@@ -201,7 +213,7 @@ footer .brand small{color:#94a3b8}
   .nav-links a{padding:13px 24px}
   .nav-links .btn{margin:10px 24px;justify-content:center}
   .nav-toggle{display:block}
-  .apps-grid{grid-template-columns:repeat(2,1fr)}
+  .slider{padding:0 6px}.slider-track .app{flex-basis:calc((100% - 16px)/2)}.slider-btn{display:none}
 }
 </style>
 </head>
@@ -420,17 +432,22 @@ footer .brand small{color:#94a3b8}
       <div class="kicker">落地场景</div>
       <h2>为真实商业地面而生</h2>
     </div>
-    <div class="apps-grid reveal">
-      <div class="app"><div class="ico">🛒</div><span>购物中心</span></div>
-      <div class="app"><div class="ico">✈️</div><span>机场航站楼</span></div>
-      <div class="app"><div class="ico">🏛️</div><span>会展中心</span></div>
-      <div class="app"><div class="ico">🏢</div><span>写字楼</span></div>
-      <div class="app"><div class="ico">🏨</div><span>酒店</span></div>
-      <div class="app"><div class="ico">🏥</div><span>医院</span></div>
-      <div class="app"><div class="ico">🛍️</div><span>商超零售</span></div>
-      <div class="app"><div class="ico">🏭</div><span>物流仓储</span></div>
-      <div class="app"><div class="ico">🎓</div><span>学校</span></div>
-      <div class="app"><div class="ico">🏬</div><span>专卖店</span></div>
+    <div class="slider reveal" id="appSlider">
+      <button class="slider-btn prev" aria-label="上一组">‹</button>
+      <div class="slider-track">
+        <div class="app"><div class="ico">🛒</div><span>购物中心</span></div>
+        <div class="app"><div class="ico">✈️</div><span>机场航站楼</span></div>
+        <div class="app"><div class="ico">🏛️</div><span>会展中心</span></div>
+        <div class="app"><div class="ico">🏢</div><span>写字楼</span></div>
+        <div class="app"><div class="ico">🏨</div><span>酒店</span></div>
+        <div class="app"><div class="ico">🏥</div><span>医院</span></div>
+        <div class="app"><div class="ico">🛍️</div><span>商超零售</span></div>
+        <div class="app"><div class="ico">🏭</div><span>物流仓储</span></div>
+        <div class="app"><div class="ico">🎓</div><span>学校</span></div>
+        <div class="app"><div class="ico">🏬</div><span>专卖店</span></div>
+      </div>
+      <button class="slider-btn next" aria-label="下一组">›</button>
+      <div class="slider-dots" id="sliderDots"></div>
     </div>
   </div>
 </section>
@@ -560,6 +577,27 @@ footer .brand small{color:#94a3b8}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+// 应用场景滑块
+(function(){
+  const tr=document.querySelector('#appSlider .slider-track');
+  if(!tr)return;
+  const prev=document.querySelector('#appSlider .prev'),next=document.querySelector('#appSlider .next');
+  const card=tr.querySelector('.app');
+  const step=()=>card?card.getBoundingClientRect().width+16:220;
+  prev.addEventListener('click',()=>tr.scrollBy({left:-step()*2,behavior:'smooth'}));
+  next.addEventListener('click',()=>tr.scrollBy({left:step()*2,behavior:'smooth'}));
+  // 圆点指示器
+  const dots=document.getElementById('sliderDots');
+  const cards=tr.querySelectorAll('.app');
+  const pages=Math.max(1,Math.round(tr.scrollWidth/tr.clientWidth));
+  if(pages>1){for(let i=0;i<pages;i++){const b=document.createElement('button');if(i===0)b.classList.add('on');b.addEventListener('click',()=>tr.scrollTo({left:i*tr.clientWidth,behavior:'smooth'}));dots.appendChild(b);}}
+  tr.addEventListener('scroll',()=>{const pi=Math.round(tr.scrollLeft/tr.clientWidth);dots.querySelectorAll('button').forEach((b,i)=>b.classList.toggle('on',i===Math.min(pi,pages-1)));},{passive:true});
+  // 拖拽滑动
+  let down=false,startX=0,startL=0;
+  tr.addEventListener('pointerdown',e=>{down=true;startX=e.clientX;startL=tr.scrollLeft;tr.classList.add('dragging');tr.setPointerCapture(e.pointerId);});
+  tr.addEventListener('pointermove',e=>{if(!down)return;tr.scrollLeft=startL-(e.clientX-startX)*1.15;});
+  ['pointerup','pointercancel'].forEach(ev=>tr.addEventListener(ev,()=>{down=false;tr.classList.remove('dragging');}));
+})();
 // 手机端 dropdown 点击展开
 const dt=document.querySelector('.drop-toggle');
 if(dt){dt.addEventListener('click',e=>{if(window.innerWidth<=960){e.preventDefault();const m=dt.nextElementSibling;m.style.display=m.style.display==='flex'?'none':'flex';m.style.position='static';m.style.opacity=1;m.style.visibility='visible';m.style.transform='none';}});}
