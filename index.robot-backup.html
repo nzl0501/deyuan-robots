@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deyuan Chuangzhi — Commercial Cleaning Robots | Sweeping, Scrubbing & Dust-Mopping</title>
+<meta name="description" content="Deyuan Chuangzhi supplies autonomous commercial cleaning robots (C5, C4, C2P, C2) for malls, airports, offices, hotels and hospitals. One fleet, every floor. Demo videos on request.">
+<meta property="og:title" content="Deyuan Chuangzhi — Commercial Cleaning Robots">
+<meta property="og:description" content="Autonomous sweeping, scrubbing & dust-mopping robots for every floor. Distributed and serviced from Hangzhou, China.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231d4ed8'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>D</text></svg>">
+<style>
+:root{
+  --blue:#1d4ed8; --blue-dark:#1e3a8a; --blue-light:#eff6ff;
+  --ink:#0f172a; --slate:#475569; --line:#e2e8f0; --bg:#f8fafc;
+  --green:#059669; --radius:14px;
+  --shadow:0 1px 3px rgba(15,23,42,.08),0 8px 24px rgba(15,23,42,.06);
+  --shadow-lg:0 4px 12px rgba(15,23,42,.10),0 20px 44px rgba(15,23,42,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue);text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+
+/* ===== Nav ===== */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--ink)}
+.brand-badge{width:34px;height:34px;border-radius:9px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px}
+.brand small{display:block;font-size:10.5px;font-weight:500;color:var(--slate);letter-spacing:.4px}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:var(--slate);font-weight:600;font-size:14.5px;transition:color .15s}
+.nav-links a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-weight:700;font-size:14.5px;padding:10px 20px;border-radius:10px;transition:background .15s,transform .15s;cursor:pointer;border:none}
+.btn:hover{background:var(--blue-dark);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--blue);border:2px solid var(--blue)}
+.btn-outline:hover{background:var(--blue-light)}
+.nav-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--ink)}
+/* ===== Dropdown ===== */
+.dropdown{position:relative}
+.drop-toggle{display:inline-flex;align-items:center;gap:5px}
+.drop-toggle svg{transition:transform .18s}
+.dropdown:hover .drop-toggle svg{transform:rotate(180deg)}
+.dropdown-menu{position:absolute;top:calc(100% + 10px);left:0;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-lg);padding:8px;min-width:210px;opacity:0;visibility:hidden;transform:translateY(6px);transition:.18s;display:flex;flex-direction:column;z-index:60}
+.dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown-menu a{padding:9px 14px;border-radius:8px;font-size:14px;color:var(--slate);white-space:nowrap;display:flex;justify-content:space-between;align-items:center;gap:18px;font-weight:600}
+.dropdown-menu a:hover{background:var(--blue-light);color:var(--blue)}
+.dropdown-menu a i{font-style:normal;font-size:11px;font-weight:700;padding:2px 9px;border-radius:999px;background:#f1f5f9;color:#64748b}
+.dropdown-menu a:hover i{background:#dbeafe;color:var(--blue)}
+.dropdown-menu .sep{height:1px;background:var(--line);margin:5px 10px}
+[id]{scroll-margin-top:84px}
+
+/* ===== Hero ===== */
+.hero{background:linear-gradient(180deg,var(--blue-light) 0%,#fff 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:64px 0 56px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);color:var(--blue);font-weight:700;font-size:12.5px;letter-spacing:1.2px;text-transform:uppercase;padding:7px 14px;border-radius:999px;box-shadow:var(--shadow)}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+h1{font-size:clamp(30px,4.6vw,50px);line-height:1.12;font-weight:800;letter-spacing:-.5px;margin:18px 0 16px}
+h1 .hl{color:var(--blue)}
+.hero p.lead{font-size:17.5px;color:var(--slate);max-width:520px;margin-bottom:28px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.hero-points{display:flex;gap:22px;flex-wrap:wrap}
+.hero-points span{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--slate)}
+.hero-points svg{flex:none}
+.hero-visual{position:relative}
+.hero-visual img{border-radius:var(--radius);box-shadow:var(--shadow-lg);border:1px solid var(--line)}
+.float-chip{position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-lg);padding:10px 16px;font-size:13px;font-weight:700;display:flex;flex-direction:column;gap:1px;animation:float 4s ease-in-out infinite}
+.float-chip b{font-size:17px;color:var(--blue)}
+.float-chip small{color:var(--slate);font-weight:600;font-size:11px}
+.chip-1{top:22px;left:-14px}
+.chip-2{bottom:26px;right:-10px;animation-delay:1.6s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* ===== Stats ===== */
+.stats{background:var(--ink);color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:34px 0;gap:18px;text-align:center}
+.stat b{font-size:clamp(24px,3vw,34px);font-weight:800;display:block;letter-spacing:-.5px}
+.stat b em{font-style:normal;color:#7cb0ff}
+.stat span{font-size:13px;color:#cbd5e1;font-weight:500}
+
+/* ===== Sections ===== */
+section{padding:72px 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 48px}
+.section-head .kicker{color:var(--blue);font-weight:800;font-size:13px;letter-spacing:1.6px;text-transform:uppercase}
+.section-head h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.4px;margin:10px 0 12px}
+.section-head p{color:var(--slate);font-size:16.5px}
+.bg-soft{background:var(--bg)}
+
+/* ===== Product cards ===== */
+.product{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.product:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.product-top{padding:26px 26px 18px;border-bottom:1px dashed var(--line)}
+.model-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+.model{font-size:26px;font-weight:800;letter-spacing:-.3px}
+.tag{font-size:11.5px;font-weight:700;padding:5px 12px;border-radius:999px;letter-spacing:.3px}
+.tag-blue{background:var(--blue-light);color:var(--blue)}
+.tag-green{background:#ecfdf5;color:var(--green)}
+.tag-amber{background:#fffbeb;color:#b45309}
+.tag-violet{background:#f5f3ff;color:#6d28d9}
+.product-tagline{font-size:14px;color:var(--slate);font-weight:600}
+.spec{list-style:none;padding:18px 26px 8px;flex:1}
+.spec li{display:flex;gap:10px;padding:7px 0;font-size:14px;border-bottom:1px solid #f1f5f9}
+.spec li:last-child{border-bottom:none}
+.spec .k{color:var(--slate);font-weight:600;flex:none;width:118px}
+.spec .v{font-weight:500}
+.best-for{margin:10px 26px 24px;background:var(--blue-light);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--blue-dark)}
+.best-for b{display:block;font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.family-strip{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:56px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:36px;box-shadow:var(--shadow)}
+.family-strip img{border-radius:10px;border:1px solid var(--line)}
+.family-strip h3{font-size:21px;font-weight:800;margin-bottom:10px}
+.family-strip p{color:var(--slate);font-size:15px;margin-bottom:14px}
+.family-strip ul{list-style:none}
+.family-strip li{display:flex;gap:9px;align-items:flex-start;font-size:14.5px;padding:4px 0;font-weight:500}
+.family-strip li svg{flex:none;margin-top:3px}
+
+/* ===== Why ===== */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.why{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.why-ico{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.why h3{font-size:17.5px;font-weight:800;margin-bottom:8px}
+.why p{color:var(--slate);font-size:14.5px}
+
+/* ===== Applications ===== */
+/* ===== Slider ===== */
+.slider{position:relative;padding:0 46px}
+.slider-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 14px;scrollbar-width:none;cursor:grab;user-select:none;-webkit-user-select:none}
+.slider-track::-webkit-scrollbar{display:none}
+.slider-track.dragging{cursor:grabbing;scroll-snap-type:none}
+.slider-track .app{flex:0 0 calc((100% - 64px)/5);scroll-snap-align:start}
+.slider-btn{position:absolute;top:38%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-lg);font-size:22px;line-height:1;color:var(--ink);cursor:pointer;z-index:5;display:flex;align-items:center;justify-content:center;transition:.15s;padding-bottom:3px}
+.slider-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.slider-btn.prev{left:0}
+.slider-btn.next{right:0}
+.slider-dots{display:flex;gap:8px;justify-content:center;margin-top:8px}
+.slider-dots button{width:9px;height:9px;border-radius:999px;border:none;background:#cbd5e1;cursor:pointer;padding:0;transition:.2s}
+.slider-dots button.on{background:var(--blue);width:26px}
+.app{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 14px;text-align:center;box-shadow:var(--shadow);transition:transform .15s}
+.app:hover{transform:translateY(-3px)}
+.app .ico{font-size:30px;margin-bottom:8px}
+.app span{font-size:13.5px;font-weight:700;color:var(--ink)}
+
+/* ===== D1 section ===== */
+.d1-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.d1-card{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+.d1-card img{width:100%;height:auto;aspect-ratio:900/466;object-fit:cover;object-position:center;background:#f1f5f9}
+.d1-card .lbl{position:absolute;left:10px;bottom:10px;background:rgba(15,23,42,.78);color:#fff;font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:8px}
+
+/* ===== Partnership ===== */
+.partner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:36px}
+.partner{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow);text-align:center}
+.partner .ico{width:52px;height:52px;margin:0 auto 14px;border-radius:14px;display:flex;align-items:center;justify-content:center}
+.partner h3{font-size:18px;font-weight:800;margin-bottom:8px}
+.partner p{color:var(--slate);font-size:14px}
+.note-band{background:var(--blue-light);border:1px solid #bfdbfe;border-radius:var(--radius);padding:22px 28px;text-align:center;font-size:15.5px;color:var(--blue-dark)}
+.note-band b{font-weight:800}
+
+/* ===== About ===== */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.about-grid h2{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.3px;margin-bottom:14px}
+.about-grid p{color:var(--slate);font-size:15.5px;margin-bottom:14px}
+.about-facts{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fact{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow)}
+.fact b{display:block;font-size:22px;font-weight:800;color:var(--blue)}
+.fact span{font-size:13px;color:var(--slate);font-weight:600}
+
+/* ===== Contact ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow-lg)}
+.contact-card h3{font-size:22px;font-weight:800;margin-bottom:6px}
+.contact-card > p{color:var(--slate);font-size:15px;margin-bottom:24px}
+.c-row{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid #f1f5f9}
+.c-row:last-of-type{border-bottom:none}
+.c-ico{width:40px;height:40px;flex:none;border-radius:10px;background:var(--blue-light);color:var(--blue);display:flex;align-items:center;justify-content:center}
+.c-row b{display:block;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--slate)}
+.c-row span{font-size:15.5px;font-weight:700}
+.steps{background:var(--ink);color:#fff;border-radius:var(--radius);padding:34px;box-shadow:var(--shadow-lg)}
+.steps h3{font-size:20px;font-weight:800;margin-bottom:20px}
+.step{display:flex;gap:16px;padding:12px 0}
+.step .n{width:30px;height:30px;flex:none;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+.step p{font-size:14.5px;color:#cbd5e1}
+.step b{color:#fff;font-size:15px;display:block}
+
+/* ===== Footer ===== */
+footer{background:var(--ink);color:#94a3b8;border-top:1px solid #1e293b}
+.foot-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding:30px 0}
+footer .brand{color:#fff}
+footer .brand small{color:#94a3b8}
+.foot-links{display:flex;gap:20px;font-size:13.5px}
+.foot-links a{color:#94a3b8}
+.foot-links a:hover{color:#fff}
+.foot-bottom{border-top:1px solid #1e293b;padding:16px 0;font-size:12.5px;text-align:center}
+
+/* ===== Reveal ===== */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== Responsive ===== */
+@media(max-width:960px){
+  .hero-grid,.about-grid,.contact-grid,.family-strip{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .products-grid,.why-grid,.d1-grid{grid-template-columns:1fr}
+  .slider{padding:0 40px}.slider-track .app{flex-basis:calc((100% - 32px)/3)}
+  .partner-grid{grid-template-columns:1fr}
+  .hero-visual{order:-1}
+  .chip-1{left:6px}.chip-2{right:6px}
+}
+@media(max-width:640px){
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 0}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 24px}
+  .nav-links .btn{margin:10px 24px;justify-content:center}
+  .nav-toggle{display:block}
+  .slider{padding:0 6px}.slider-track .app{flex-basis:calc((100% - 16px)/2)}.slider-btn{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-badge">D</span>
+      <span>Deyuan Chuangzhi<small>COMMERCIAL CLEANING ROBOTS</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <div class="nav-links" id="navlinks">
+      <div class="dropdown">
+        <a href="#products" class="drop-toggle">Products
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#c5"><span>C5 Heavy-duty</span><i>1,980 m²/h</i></a>
+          <a href="#c4"><span>C4 Mid-size</span><i>1,400 m²/h</i></a>
+          <a href="#c2p"><span>C2P Compact 4-in-1</span><i>4-in-1</i></a>
+          <a href="#c2"><span>C2 Compact Quiet</span><i>&lt; 60 dB</i></a>
+          <div class="sep"></div>
+          <a href="#d1"><span>D1 Quadruped Robots</span><i>4-legs</i></a>
+        </div>
+      </div>
+      <a href="#applications">Applications</a>
+      <a href="#why">Why Robots</a>
+      <a href="#partners">Partnership</a>
+      <a href="#about">About Us</a>
+      <a class="lang-switch" href="zh/">中文 🌐</a>
+      <a class="btn" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20Commercial%20Cleaning%20Robots">Get a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Sweeping · Scrubbing · Dust-Mopping</span>
+      <h1>Autonomous cleaning robots for <span class="hl">every floor</span> of your business</h1>
+      <p class="lead">From 1,980&nbsp;m²/h heavy-duty machines for airport terminals to quiet compact cleaners for clinics — one fleet, one operator, floors done day and night.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#products">Explore the Fleet
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-outline" href="#contact">Request Demo Video</a>
+      </div>
+      <div class="hero-points">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>95% pick-up rate</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Auto charging &amp; docking</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Spec sheets on request</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="images/catalog-wide.png" alt="Deyuan Chuangzhi commercial cleaning robot fleet" width="1809" height="1018">
+      <div class="float-chip chip-1"><b>1,980 m²/h</b><small>C5 heavy-duty</small></div>
+      <div class="float-chip chip-2"><b>&lt; 60 dB</b><small>night-shift quiet</small></div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= STATS ================= -->
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><b>4 <em>models</em></b><span>heavy-duty → compact</span></div>
+    <div class="stat"><b>1,980 <em>m²/h</em></b><span>max cleaning efficiency</span></div>
+    <div class="stat"><b>95<em>%</em></b><span>debris pick-up rate</span></div>
+    <div class="stat"><b>24 <em>h</em></b><span>reply within one day</span></div>
+  </div>
+</div>
+
+<!-- ================= PRODUCTS ================= -->
+<section id="products">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">The Fleet</div>
+      <h2>One robot for every floor plan</h2>
+      <p>Four models cover everything from 100,000&nbsp;m² exhibition centers to 60&nbsp;cm office aisles. All units dock, charge and service themselves.</p>
+    </div>
+
+    <div class="products-grid">
+      <!-- C5 -->
+      <article class="product reveal" id="c5">
+        <div class="product-top">
+          <div class="model-row"><span class="model">C5</span><span class="tag tag-blue">Heavy-duty</span></div>
+          <div class="product-tagline">Large-venue cleaner: malls, airport terminals, convention centers, big lobbies.</div>
+        </div>
+        <ul class="spec">
+          <li><span class="k">Efficiency</span><span class="v">Up to 1,980 m²/h · 550&nbsp;mm scrubbing width</span></li>
+          <li><span class="k">Modes</span><span class="v">Sweeping + scrubbing + dust-mopping in a single pass</span></li>
+          <li><span class="k">Tanks</span><span class="v">90&nbsp;L total</span></li>
+          <li><span class="k">Runtime</span><span class="v">&gt; 3&nbsp;h scrubbing · &gt; 10&nbsp;h dust-mopping</span></li>
+          <li><span class="k">Navigation</span><span class="v">Laser + vision fusion, point-cloud perception</span></li>
+          <li><span class="k">Size / weight</span><span class="v">820 × 680 × 1,130&nbsp;mm · 170&nbsp;kg</span></li>
+        </ul>
+        <div class="best-for"><b>Best for</b>Shopping malls · Airport terminals · Exhibition centers · Hotel lobbies · Logistics halls</div>
+      </article>
+
+      <!-- C4 -->
+      <article class="product reveal" id="c4">
+        <div class="product-top">
+          <div class="model-row"><span class="model">C4</span><span class="tag tag-green">Mid-size</span></div>
+          <div class="product-tagline">For complex indoor layouts — passes 60&nbsp;cm aisles, turns within 80&nbsp;cm.</div>
+        </div>
+        <ul class="spec">
+          <li><span class="k">Efficiency</span><span class="v">1,400 m²/h · 380&nbsp;mm scrubbing width</span></li>
+          <li><span class="k">Modes</span><span class="v">Front sweeping + rear scrubbing · 95% pick-up</span></li>
+          <li><span class="k">Tanks</span><span class="v">25&nbsp;L clean / 25&nbsp;L dirty</span></li>
+          <li><span class="k">Runtime</span><span class="v">3&nbsp;h scrubbing · 1.5&nbsp;h charge</span></li>
+          <li><span class="k">Navigation</span><span class="v">Multi-line LiDAR + vision, auto map updates</span></li>
+          <li><span class="k">Station</span><span class="v">Auto charging, fill/drain, detergent, full self-cleaning</span></li>
+        </ul>
+        <div class="best-for"><b>Best for</b>Office towers · Hotels · Retail &amp; supermarkets · Hospitals · Schools</div>
+      </article>
+
+      <!-- C2P -->
+      <article class="product reveal" id="c2p">
+        <div class="product-top">
+          <div class="model-row"><span class="model">C2P</span><span class="tag tag-violet">Compact 4-in-1</span></div>
+          <div class="product-tagline">Sweep + scrub + vacuum + dust-mop with self-emptying dock. Night-shift ready.</div>
+        </div>
+        <ul class="spec">
+          <li><span class="k">Efficiency</span><span class="v">300 – 700 m²/h · 390&nbsp;mm cleaning width</span></li>
+          <li><span class="k">Modes</span><span class="v">4-in-1: sweep, scrub, vacuum, dust-mop</span></li>
+          <li><span class="k">Tanks</span><span class="v">4&nbsp;L clean / 3.5&nbsp;L dirty</span></li>
+          <li><span class="k">Runtime</span><span class="v">4&nbsp;h cleaning · 2&nbsp;h charge</span></li>
+          <li><span class="k">Noise</span><span class="v">&lt; 60&nbsp;dB(A) — cleans while tenants sleep</span></li>
+          <li><span class="k">Dock</span><span class="v">Auto dust-emptying, 10&nbsp;L chamber, mop drying</span></li>
+        </ul>
+        <div class="best-for"><b>Best for</b>Offices · Clinics &amp; healthcare · Boutique retail · Night-shift programs</div>
+      </article>
+
+      <!-- C2 -->
+      <article class="product reveal" id="c2">
+        <div class="product-top">
+          <div class="model-row"><span class="model">C2</span><span class="tag tag-amber">Compact Quiet</span></div>
+          <div class="product-tagline">The lightest member of the fleet — 17.5&nbsp;kg, crosses obstacles up to 50&nbsp;mm.</div>
+        </div>
+        <ul class="spec">
+          <li><span class="k">Efficiency</span><span class="v">300 – 700 m²/h · 390&nbsp;mm cleaning width</span></li>
+          <li><span class="k">Modes</span><span class="v">Sweep + scrub + vacuum</span></li>
+          <li><span class="k">Tanks</span><span class="v">4&nbsp;L clean / 3.5&nbsp;L dirty</span></li>
+          <li><span class="k">Runtime</span><span class="v">4&nbsp;h cleaning · 2&nbsp;h charge</span></li>
+          <li><span class="k">Special</span><span class="v">Crosses obstacles up to 50&nbsp;mm · &lt; 60&nbsp;dB(A)</span></li>
+          <li><span class="k">Size / weight</span><span class="v">510 × 520 × 278&nbsp;mm · 17.5&nbsp;kg</span></li>
+        </ul>
+        <div class="best-for"><b>Best for</b>Small offices · Restaurants · Clinics · Shops · Restaurants</div>
+      </article>
+    </div>
+
+    <!-- family -->
+    <div class="family-strip reveal">
+      <img src="images/catalog-family.png" alt="C5, C4, C2P and C2 robot family lineup" width="451" height="654">
+      <div>
+        <h3>One fleet, four specialists</h3>
+        <p>Mix models in a single deployment — the same operator supervises the whole fleet while each machine handles the floor it was built for.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>C5 sweeps, scrubs and dust-mops in a single pass — one machine replaces a full daytime crew on open floors</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>C4's full-auto station handles charging, water refill, detergent and self-cleaning — no hands needed</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>C2P empties its own dust bin at the dock — runs unattended through the night shift</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>Optional docking stations: auto charging, auto fill &amp; drain, 4-minute wastewater self-clean</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section class="bg-soft" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">The Payoff</div>
+      <h2>Why automated cleaning pays off</h2>
+      <p>Robotics is not about replacing people — it's about cutting cost per square meter on every contract you run.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal">
+        <div class="why-ico" style="background:#eff6ff">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>One operator, whole fleet</h3>
+        <p>One person supervises every machine at once. Instead of a full daytime cleaning crew, you staff a single operator — and cut labor cost per square meter on every contract.</p>
+      </div>
+      <div class="why reveal">
+        <div class="why-ico" style="background:#ecfdf5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+        </div>
+        <h3>Consistent, measurable results</h3>
+        <p>A verified 95% pick-up rate on every single run — day shift and night shift included. No bad days, no re-work, no arguments with the client about quality.</p>
+      </div>
+      <div class="why reveal">
+        <div class="why-ico" style="background:#fff7ed">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2"><rect x="2" y="9" width="20" height="12" rx="2"/><path d="M12 9V5M8 21v-2a4 4 0 0 1 8 0v2"/><circle cx="12" cy="4" r="1"/></svg>
+        </div>
+        <h3>Self-servicing fleet</h3>
+        <p>Auto docking handles charging, water fill and drain, plus a 4-minute wastewater tank self-clean. Minimal human intervention between jobs.</p>
+      </div>
+      <div class="why reveal">
+        <div class="why-ico" style="background:#f5f3ff">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6d28d9" stroke-width="2"><path d="M3 11l18-2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V11zM3 11V9a2 2 0 0 1 2-2h4l2-3h6l1 3h1a2 2 0 0 1 2 2v2"/></svg>
+        </div>
+        <h3>Daytime floors stay open</h3>
+        <p>Quiet models run below 60&nbsp;dB — they clean while your tenants work or sleep. Lobbies and corridors never need to be closed for cleaning again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPLICATIONS ================= -->
+<section id="applications">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">Where They Work</div>
+      <h2>Built for real commercial floors</h2>
+    </div>
+    <div class="slider reveal" id="appSlider">
+      <button class="slider-btn prev" aria-label="Previous">‹</button>
+      <div class="slider-track">
+        <div class="app"><div class="ico">🛒</div><span>Shopping Malls</span></div>
+        <div class="app"><div class="ico">✈️</div><span>Airport Terminals</span></div>
+        <div class="app"><div class="ico">🏛️</div><span>Convention Centers</span></div>
+        <div class="app"><div class="ico">🏢</div><span>Office Towers</span></div>
+        <div class="app"><div class="ico">🏨</div><span>Hotels</span></div>
+        <div class="app"><div class="ico">🏥</div><span>Hospitals</span></div>
+        <div class="app"><div class="ico">🛍️</div><span>Retail &amp; Supermarkets</span></div>
+        <div class="app"><div class="ico">🏭</div><span>Logistics Halls</span></div>
+        <div class="app"><div class="ico">🎓</div><span>Schools</span></div>
+        <div class="app"><div class="ico">🏥</div><span>Clinics</span></div>
+      </div>
+      <button class="slider-btn next" aria-label="Next">›</button>
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MORE THAN CLEANING (D1) ================= -->
+<section class="bg-soft" id="d1">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">Beyond Cleaning</div>
+      <h2>D1 quadruped robots</h2>
+      <p>We also carry the D1 robot-dog series — education, research, exhibition and patrol applications. Ask for the D1 line sheet.</p>
+    </div>
+    <div class="d1-grid">
+      <div class="d1-card reveal"><img src="images/D1_Pro.jpg" alt="D1 Pro quadruped robot" loading="lazy"><span class="lbl">D1 Pro</span></div>
+      <div class="d1-card reveal"><img src="images/D1_Max.jpg" alt="D1 Max quadruped robot" loading="lazy"><span class="lbl">D1 Max</span></div>
+      <div class="d1-card reveal"><img src="images/D1_EDU.jpg" alt="D1 EDU quadruped robot for education" loading="lazy"><span class="lbl">D1 EDU</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTNERSHIP ================= -->
+<section id="partners">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">Partnership</div>
+      <h2>Who we work with</h2>
+      <p>We supply end users, cleaning contractors and distributors worldwide.</p>
+    </div>
+    <div class="partner-grid">
+      <div class="partner reveal">
+        <div class="ico" style="background:#eff6ff">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+        </div>
+        <h3>End Users</h3>
+        <p>Malls, hotels, hospitals and facility teams running their own fleets. We size the fleet to your floor plan and support deployment.</p>
+      </div>
+      <div class="partner reveal">
+        <div class="ico" style="background:#ecfdf5">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M14 2l6 6-6 6M20 8H9a5 5 0 0 0-5 5v9"/></svg>
+        </div>
+        <h3>Cleaning Contractors</h3>
+        <p>Robots that cut cost per square meter on the contracts you already hold — day and night shifts covered by one operator.</p>
+      </div>
+      <div class="partner reveal">
+        <div class="ico" style="background:#f5f3ff">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6d28d9" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+        </div>
+        <h3>Distributors</h3>
+        <p>Demo units, margin-friendly pricing, marketing support and territory discussion. Get in touch to talk about your market.</p>
+      </div>
+    </div>
+    <div class="note-band reveal"><b>Dealers welcome.</b> Reply to our email and we will arrange a demo video call — full spec sheets and demo videos available on request.</div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="bg-soft" id="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <div class="kicker" style="color:var(--blue);font-weight:800;font-size:13px;letter-spacing:1.6px;text-transform:uppercase">About Us</div>
+      <h2>Shanghai Deyuan Chuangzhi Technology Service Co., Ltd.</h2>
+      <p>We distribute and service commercial cleaning robots out of Hangzhou, Zhejiang — the heart of China's robotics industry. Our job doesn't end at the container door: we handle commissioning, training and after-sales support for every fleet we ship.</p>
+      <p>Today we supply cleaning robots and quadruped robots to end users, contractors and channel partners across China and overseas markets.</p>
+    </div>
+    <div class="about-facts">
+      <div class="fact reveal"><b>2</b><span>product lines — cleaning &amp; quadruped robots</span></div>
+      <div class="fact reveal"><b>4 + 6</b><span>cleaning models + D1 quadruped variants</span></div>
+      <div class="fact reveal"><b>Full</b><span>spec sheets &amp; demo videos on request</span></div>
+      <div class="fact reveal"><b>Hangzhou</b><span>Zhejiang, China — ship worldwide</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">Get in Touch</div>
+      <h2>Talk to us about your floors</h2>
+      <p>Tell us your venue size and cleaning schedule — we'll match the right models and send demo videos.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <h3>Contact</h3>
+        <p>Reply to our email and we will arrange the demo video call.</p>
+        <div class="c-row">
+          <div class="c-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+          <div><b>Email</b><span>2305960967@qq.com</span></div>
+        </div>
+        <div class="c-row">
+          <div class="c-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div><b>Contact Person</b><span>Long — Overseas Sales</span></div>
+        </div>
+        <div class="c-row">
+          <div class="c-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><b>Location</b><span>Hangzhou, Zhejiang, China</span></div>
+        </div>
+        <div class="c-row">
+          <div class="c-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div><b>Response Time</b><span>Within 24 hours</span></div>
+        </div>
+        <a class="btn" style="margin-top:18px" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20Commercial%20Cleaning%20Robots&amp;body=Hi%20Long%2C%0A%0AOur%20venue%3A%20%0AFloor%20area%20(m2)%3A%20%0AFloor%20types%3A%20%0AModels%20of%20interest%3A%20C5%20%2F%20C4%20%2F%20C2P%20%2F%20C2%0A%0ARegards%2C">Email Us Directly</a>
+      </div>
+      <div class="steps reveal">
+        <h3>How we work</h3>
+        <div class="step"><span class="n">1</span><p><b>Tell us your floors</b>Venue type, square meters, current cleaning schedule.</p></div>
+        <div class="step"><span class="n">2</span><p><b>Get a matched proposal</b>We size the fleet, share full spec sheets and demo videos.</p></div>
+        <div class="step"><span class="n">3</span><p><b>Demo video call</b>See the machines run on floors like yours — live or recorded.</p></div>
+        <div class="step"><span class="n">4</span><p><b>Ship, commission, support</b>Deployment, operator training and after-sales from our Hangzhou team.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container foot-grid">
+    <a class="brand" href="#top"><span class="brand-badge">D</span><span>Deyuan Chuangzhi<small>Shanghai Deyuan Chuangzhi Technology Service Co., Ltd.</small></span></a>
+    <div class="foot-links">
+      <a href="#products">Products</a><a href="#applications">Applications</a><a href="#why">Why Robots</a><a href="#partners">Partnership</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="foot-bottom container">© 2026 Shanghai Deyuan Chuangzhi Technology Service Co., Ltd. — Hangzhou, Zhejiang, China. All rights reserved.</div>
+</footer>
+
+<script>
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// close mobile menu on click
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+// 应用场景滑块
+(function(){
+  const tr=document.querySelector('#appSlider .slider-track');
+  if(!tr)return;
+  const prev=document.querySelector('#appSlider .prev'),next=document.querySelector('#appSlider .next');
+  const card=tr.querySelector('.app');
+  const step=()=>card?card.getBoundingClientRect().width+16:220;
+  prev.addEventListener('click',()=>tr.scrollBy({left:-step()*2,behavior:'smooth'}));
+  next.addEventListener('click',()=>tr.scrollBy({left:step()*2,behavior:'smooth'}));
+  // 圆点指示器
+  const dots=document.getElementById('sliderDots');
+  const cards=tr.querySelectorAll('.app');
+  const pages=Math.max(1,Math.round(tr.scrollWidth/tr.clientWidth));
+  if(pages>1){for(let i=0;i<pages;i++){const b=document.createElement('button');if(i===0)b.classList.add('on');b.addEventListener('click',()=>tr.scrollTo({left:i*tr.clientWidth,behavior:'smooth'}));dots.appendChild(b);}}
+  tr.addEventListener('scroll',()=>{const pi=Math.round(tr.scrollLeft/tr.clientWidth);dots.querySelectorAll('button').forEach((b,i)=>b.classList.toggle('on',i===Math.min(pi,pages-1)));},{passive:true});
+  // 拖拽滑动
+  let down=false,startX=0,startL=0;
+  tr.addEventListener('pointerdown',e=>{down=true;startX=e.clientX;startL=tr.scrollLeft;tr.classList.add('dragging');tr.setPointerCapture(e.pointerId);});
+  tr.addEventListener('pointermove',e=>{if(!down)return;tr.scrollLeft=startL-(e.clientX-startX)*1.15;});
+  ['pointerup','pointercancel'].forEach(ev=>tr.addEventListener(ev,()=>{down=false;tr.classList.remove('dragging');}));
+})();
+// 手机端 dropdown 点击展开
+const dt=document.querySelector('.drop-toggle');
+if(dt){dt.addEventListener('click',e=>{if(window.innerWidth<=960){e.preventDefault();const m=dt.nextElementSibling;m.style.display=m.style.display==='flex'?'none':'flex';m.style.position='static';m.style.opacity=1;m.style.visibility='visible';m.style.transform='none';}});}
+
+</script>
+</body>
+</html>
