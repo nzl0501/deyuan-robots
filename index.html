@@ -29,7 +29,7 @@ a{color:var(--coffee);text-decoration:none}
 .nav{position:sticky;top:0;z-index:50;background:rgba(250,246,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--ink)}
-.brand-logo{height:40px;width:auto;border-radius:6px}
+.brand-logo{height:38px;width:auto}
 .brand-badge{width:34px;height:34px;border-radius:9px;background:var(--coffee);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px}
 .brand small{display:block;font-size:10.5px;font-weight:500;color:var(--slate);letter-spacing:1px}
 .nav-links{display:flex;gap:26px;align-items:center}
@@ -169,7 +169,7 @@ footer .brand,footer .brand small{color:#f3ece1}
 <nav class="nav">
   <div class="container nav-inner">
     <a class="brand" href="#top">
-      <img src="images/galileo-logo.jpg" alt="Galileo" class="brand-logo">
+      <img src="images/galileo-logo.png" alt="Galileo" class="brand-logo">
     </a>
     <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <div class="nav-links" id="navlinks">
@@ -705,7 +705,7 @@ footer .brand,footer .brand small{color:#f3ece1}
 
 <footer>
   <div class="container foot-grid">
-    <a class="brand" href="#top" style="background:rgba(250,246,240,.92);padding:6px 12px;border-radius:8px"><img src="images/galileo-logo.jpg" alt="Galileo" class="brand-logo"></a>
+    <a class="brand" href="#top"><img src="images/galileo-logo.png" alt="Galileo" class="brand-logo" style="height:32px;filter:brightness(0) invert(1) opacity(.92)"></a>
     <div class="foot-links">
       <a href="#products">Products</a><a href="#robots">Robots</a><a href="#markets">Markets</a><a href="#contact">Contact</a>
     </div>
