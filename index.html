@@ -7,7 +7,7 @@
 <meta name="description" content="Deyuan Chuangzhi supplies kitchen appliances for Africa, Middle East & Southeast Asia markets: meat grinder blenders, dough mixers, cassava chopping blades, air fryers, steamers. 50+ models, OEM ready.">
 <meta property="og:title" content="Deyuan Chuangzhi — Kitchen Appliance Manufacturer & Exporter">
 <meta property="og:description" content="50+ kitchen appliance models: meat grinder blenders, dough mixers, cassava choppers, air fryers. OEM/ODM ready, export worldwide.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236f4e37'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>D</text></svg>">
+<link rel="icon" href="images/favicon-galileo.png"><rect width='100' height='100' rx='22' fill='%236f4e37'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>D</text></svg>">
 <style>
 :root{
   --coffee:#6f4e37; --coffee-dark:#4a3222; --coffee-deep:#3a2718;
@@ -29,6 +29,7 @@ a{color:var(--coffee);text-decoration:none}
 .nav{position:sticky;top:0;z-index:50;background:rgba(250,246,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--ink)}
+.brand-logo{height:40px;width:auto;border-radius:6px}
 .brand-badge{width:34px;height:34px;border-radius:9px;background:var(--coffee);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px}
 .brand small{display:block;font-size:10.5px;font-weight:500;color:var(--slate);letter-spacing:1px}
 .nav-links{display:flex;gap:26px;align-items:center}
@@ -153,6 +154,7 @@ footer .brand,footer .brand small{color:#f3ece1}
 @media(max-width:960px){.hero-grid,.about-grid,.robot-cards{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.markets{grid-template-columns:repeat(2,1fr)}.hero-visual{order:-1}}
 @media(max-width:680px){.p-grid{grid-template-columns:repeat(2,1fr)}section{padding:52px 0}.backtop{right:14px;bottom:calc(14px + env(safe-area-inset-bottom))}}
 @media(max-width:640px){
+  .brand-logo{height:30px}
   .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 0}
   .nav-links.open{display:flex}
   .nav-links a{padding:13px 24px}
@@ -167,8 +169,7 @@ footer .brand,footer .brand small{color:#f3ece1}
 <nav class="nav">
   <div class="container nav-inner">
     <a class="brand" href="#top">
-      <span class="brand-badge">D</span>
-      <span>Deyuan Chuangzhi<small>KITCHEN APPLIANCES & ROBOTICS</small></span>
+      <img src="images/galileo-logo.jpg" alt="Galileo" class="brand-logo">
     </a>
     <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <div class="nav-links" id="navlinks">
@@ -704,7 +705,7 @@ footer .brand,footer .brand small{color:#f3ece1}
 
 <footer>
   <div class="container foot-grid">
-    <a class="brand" href="#top"><span class="brand-badge">D</span><span>Deyuan Chuangzhi<small>Shanghai Deyuan Chuangzhi Technology Service Co., Ltd.</small></span></a>
+    <a class="brand" href="#top" style="background:rgba(250,246,240,.92);padding:6px 12px;border-radius:8px"><img src="images/galileo-logo.jpg" alt="Galileo" class="brand-logo"></a>
     <div class="foot-links">
       <a href="#products">Products</a><a href="#robots">Robots</a><a href="#markets">Markets</a><a href="#contact">Contact</a>
     </div>
