@@ -37,8 +37,10 @@ a{color:var(--coffee);text-decoration:none}
 .nav-links a:hover{color:var(--coffee)}
 .btn{display:inline-flex;align-items:center;gap:8px;background:var(--coffee);color:#fff;font-weight:700;font-size:14.5px;padding:10px 20px;border-radius:10px;transition:background .15s,transform .15s;cursor:pointer;border:none}
 .btn:hover{background:var(--coffee-dark);transform:translateY(-1px)}
+.btn:active{transform:translateY(0) scale(.97)}
 .btn-red{background:var(--red)}
 .btn-red:hover{background:#993d30}
+.btn-red:active{transform:translateY(0) scale(.97)}
 .btn-outline{background:transparent;color:var(--coffee);border:2px solid var(--coffee)}
 .btn-outline:hover{background:var(--cream-2)}
 .nav-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--ink)}
@@ -84,6 +86,7 @@ section{padding:72px 0}
 .filters button{border:1.5px solid var(--line);background:#fff;color:var(--slate);font-weight:700;font-size:13.5px;padding:8px 18px;border-radius:999px;cursor:pointer;transition:.15s}
 .filters button:hover{border-color:var(--coffee);color:var(--coffee)}
 .filters button.on{background:var(--coffee);border-color:var(--coffee);color:#fff}
+.filters button:active{transform:scale(.96)}
 
 /* ===== Product grid ===== */
 .p-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -99,6 +102,9 @@ section{padding:72px 0}
 .p-ask{margin-top:auto;padding-top:8px;font-size:13px;font-weight:700;color:var(--coffee)}
 .p-ask:hover{color:var(--red)}
 .p-card.hide{display:none}
+@keyframes cardIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.p-card{animation:cardIn .4s ease both}
+.p-card:nth-child(8n+2){animation-delay:.03s}.p-card:nth-child(8n+3){animation-delay:.06s}.p-card:nth-child(8n+4){animation-delay:.09s}.p-card:nth-child(8n+5){animation-delay:.12s}.p-card:nth-child(8n+6){animation-delay:.15s}.p-card:nth-child(8n+7){animation-delay:.18s}.p-card:nth-child(8n+8){animation-delay:.21s}
 
 /* ===== Robot section ===== */
 .robot-band{background:var(--cream-2)}
@@ -112,7 +118,9 @@ section{padding:72px 0}
 /* ===== Markets ===== */
 .markets{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .market{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 16px;text-align:center;box-shadow:var(--shadow)}
-.market .ico{font-size:30px;margin-bottom:8px}
+.m-ico{width:34px;height:34px;color:var(--red);margin:0 auto 10px;display:block}
+.market{transition:transform .15s}
+.market:hover{transform:translateY(-3px)}
 .market span{font-size:14px;font-weight:700}
 .market small{display:block;font-size:12px;color:var(--slate);margin-top:2px}
 
@@ -232,7 +240,7 @@ footer .brand,footer .brand small{color:#f3ece1}
       <button data-f="noodle">Noodle & Others</button>
     </div>
     <div class="p-grid" id="pgrid">
-        <div class="p-card reveal" data-cat="cassava">
+        <div class="p-card" data-cat="cassava">
           <div class="p-img"><img src="images/appliance/main/p02.jpg" alt="Cassava Chopping Blade 1800W" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Cassava Chopping Blade 1800W</div>
@@ -240,7 +248,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-HHJ-06%20Cassava%20Chopping%20Blade%201800W">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="dough">
+        <div class="p-card" data-cat="dough">
           <div class="p-img"><img src="images/appliance/main/p03.jpg" alt="Dough Mixer / Kitchen Machine 7L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Dough Mixer / Kitchen Machine 7L</div>
@@ -248,7 +256,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-016FM%20Dough%20Mixer%20/%20Kitchen%20Machine%207L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="dough">
+        <div class="p-card" data-cat="dough">
           <div class="p-img"><img src="images/appliance/main/p04.jpg" alt="Dough Mixer / Kitchen Machine 7L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Dough Mixer / Kitchen Machine 7L</div>
@@ -256,7 +264,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-1533%20Dough%20Mixer%20/%20Kitchen%20Machine%207L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="dough">
+        <div class="p-card" data-cat="dough">
           <div class="p-img"><img src="images/appliance/main/p05.jpg" alt="Dough Mixer / Kitchen Machine 7L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Dough Mixer / Kitchen Machine 7L</div>
@@ -264,7 +272,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-028%20Dough%20Mixer%20/%20Kitchen%20Machine%207L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p06.jpg" alt="5L  capacity" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">5L  capacity</div>
@@ -272,7 +280,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-288%205L%20%20capacity">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p07.jpg" alt="0.6L  capacity" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">0.6L  capacity</div>
@@ -280,7 +288,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-201%200.6L%20%20capacity">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p08.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -288,7 +296,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-301%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p09.jpg" alt="3L  capacity   Glass Cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">3L  capacity   Glass Cup</div>
@@ -296,7 +304,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-403%203L%20%20capacity%20%20%20Glass%20Cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p10.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -304,7 +312,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-305%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p11.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -312,7 +320,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-306%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p12.jpg" alt="2L  capacity Glass cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">2L  capacity Glass cup</div>
@@ -320,7 +328,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-307%202L%20%20capacity%20Glass%20cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p13.jpg" alt="2L  capacity Glass cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">2L  capacity Glass cup</div>
@@ -328,7 +336,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-309%202L%20%20capacity%20Glass%20cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p14.jpg" alt="2L  stainless steel Cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">2L  stainless steel Cup</div>
@@ -336,7 +344,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-310%202L%20%20stainless%20steel%20Cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p15.jpg" alt="2L  stainless steel Cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">2L  stainless steel Cup</div>
@@ -344,7 +352,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-311%202L%20%20stainless%20steel%20Cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p16.jpg" alt="2L  capacity Glass cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">2L  capacity Glass cup</div>
@@ -352,7 +360,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-313%202L%20%20capacity%20Glass%20cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p17.jpg" alt="3L  stainless steel Cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">3L  stainless steel Cup</div>
@@ -360,7 +368,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-313%203L%20%20stainless%20steel%20Cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p18.jpg" alt="5L  stainless steel Cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">5L  stainless steel Cup</div>
@@ -368,7 +376,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-803%205L%20%20stainless%20steel%20Cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p19.jpg" alt="2L  capacity Glass cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">2L  capacity Glass cup</div>
@@ -376,7 +384,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-315%202L%20%20capacity%20Glass%20cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p20.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -384,7 +392,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-317%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p21.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -392,7 +400,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-318%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p22.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -400,7 +408,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-319%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p23.jpg" alt="2L  capacity Glass cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">2L  capacity Glass cup</div>
@@ -408,7 +416,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-320%202L%20%20capacity%20Glass%20cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p24.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -416,7 +424,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-321%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p25.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -424,7 +432,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-323%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p26.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -432,7 +440,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-325%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p27.jpg" alt="Meat Grinder Blender 3L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 3L</div>
@@ -440,7 +448,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-416%20Meat%20Grinder%20Blender%203L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p28.jpg" alt="3L  capacity Glass cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">3L  capacity Glass cup</div>
@@ -448,7 +456,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-427%203L%20%20capacity%20Glass%20cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p29.jpg" alt="2L  capacity Glass cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">2L  capacity Glass cup</div>
@@ -456,7 +464,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-329%202L%20%20capacity%20Glass%20cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p30.jpg" alt="2L  capacity Glass cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">2L  capacity Glass cup</div>
@@ -464,7 +472,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-330%202L%20%20capacity%20Glass%20cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p31.jpg" alt="3L  capacity Glass cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">3L  capacity Glass cup</div>
@@ -472,7 +480,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-426%203L%20%20capacity%20Glass%20cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p32.jpg" alt="Meat Grinder Blender 3L · Glass Jar" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 3L · Glass Jar</div>
@@ -480,7 +488,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-428%20Meat%20Grinder%20Blender%203L%20·%20Glass%20Jar">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p33.jpg" alt="4L  stainless steel Cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">4L  stainless steel Cup</div>
@@ -488,7 +496,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-501%204L%20%20stainless%20steel%20Cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p34.jpg" alt="Meat Grinder Blender 3L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 3L</div>
@@ -496,7 +504,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-502%20Meat%20Grinder%20Blender%203L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p35.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -504,7 +512,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-505%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p36.jpg" alt="5L  stainless steel Cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">5L  stainless steel Cup</div>
@@ -512,7 +520,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-808%205L%20%20stainless%20steel%20Cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p37.jpg" alt="5L  stainless steel Cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">5L  stainless steel Cup</div>
@@ -520,7 +528,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-509%205L%20%20stainless%20steel%20Cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p38.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -528,7 +536,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-1001%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p39.jpg" alt="Meat Grinder Blender 5L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 5L</div>
@@ -536,7 +544,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-1002%20Meat%20Grinder%20Blender%205L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p40.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -544,7 +552,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-1003%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p41.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -552,7 +560,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-1005%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p42.jpg" alt="10L  stainless steel Cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">10L  stainless steel Cup</div>
@@ -560,7 +568,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-1606%2010L%20%20stainless%20steel%20Cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p43.jpg" alt="15L  stainless steel Cup" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">15L  stainless steel Cup</div>
@@ -568,7 +576,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-2002%2015L%20%20stainless%20steel%20Cup">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p44.jpg" alt="Meat Grinder Blender 2L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 2L</div>
@@ -576,7 +584,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-2201%20Meat%20Grinder%20Blender%202L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p45.jpg" alt="Meat Grinder Blender 6L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Meat Grinder Blender 6L</div>
@@ -584,7 +592,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-8806%20Meat%20Grinder%20Blender%206L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p46.jpg" alt="0.5L  Grinding machine" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">0.5L  Grinding machine</div>
@@ -592,7 +600,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-601%200.5L%20%20Grinding%20machine">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="noodle">
+        <div class="p-card" data-cat="noodle">
           <div class="p-img"><img src="images/appliance/main/p47.jpg" alt="Noodle Gun / Pasta Maker" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Noodle Gun / Pasta Maker</div>
@@ -600,7 +608,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-8301%20Noodle%20Gun%20/%20Pasta%20Maker">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="steamer">
+        <div class="p-card" data-cat="steamer">
           <div class="p-img"><img src="images/appliance/main/p48.jpg" alt="Electric Steamer" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Electric Steamer</div>
@@ -608,7 +616,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20YZ-C005%20Electric%20Steamer">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p49.jpg" alt="Mini Soy Milk Maker 1.6L" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Mini Soy Milk Maker 1.6L</div>
@@ -616,7 +624,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20Rated%20Mini%20Soy%20Milk%20Maker%201.6L">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="grinder">
+        <div class="p-card" data-cat="grinder">
           <div class="p-img"><img src="images/appliance/main/p52.jpg" alt="Blender" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Blender</div>
@@ -624,7 +632,7 @@ footer .brand,footer .brand small{color:#f3ece1}
             <a class="p-ask" href="mailto:2305960967@qq.com?subject=Inquiry%3A%20Y66%20Blender">Inquire →</a>
           </div>
         </div>
-        <div class="p-card reveal" data-cat="fryer">
+        <div class="p-card" data-cat="fryer">
           <div class="p-img"><img src="images/appliance/main/p53.jpg" alt="Air Fryer" loading="lazy"></div>
           <div class="p-info">
             <div class="p-name">Air Fryer</div>
@@ -667,10 +675,22 @@ footer .brand,footer .brand small{color:#f3ece1}
       <h2>Built for emerging markets</h2>
     </div>
     <div class="markets reveal">
-      <div class="market"><div class="ico">🌍</div><span>West Africa</span><small>Nigeria · Ghana · Ivory Coast</small></div>
-      <div class="market"><div class="ico">🕌</div><span>East Africa</span><small>Kenya · Tanzania · Ethiopia</small></div>
-      <div class="market"><div class="ico">🐪</div><span>Middle East</span><small>UAE · Saudi Arabia</small></div>
-      <div class="market"><div class="ico">🌏</div><span>Southeast Asia</span><small>Vietnam · Philippines</small></div>
+      <div class="market">
+        <svg class="m-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 2.6 4 5.6 4 9s-1.2 6.4-4 9c-2.8-2.6-4-5.6-4-9s1.2-6.4 4-9z"/></svg>
+        <span>West Africa</span><small>Nigeria · Ghana · Ivory Coast</small>
+      </div>
+      <div class="market">
+        <svg class="m-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/><path d="M12 8.4V21"/></svg>
+        <span>East Africa</span><small>Kenya · Tanzania · Ethiopia</small>
+      </div>
+      <div class="market">
+        <svg class="m-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6M9 11h.01M15 11h.01"/></svg>
+        <span>Middle East</span><small>UAE · Saudi Arabia</small>
+      </div>
+      <div class="market">
+        <svg class="m-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 15s1.5-1 4-1 4.5 2 7 2 4-1 4-1V7s-1.5 1-4 1-4.5-2-7-2-4 1-4 1z"/><path d="M4 15v3"/></svg>
+        <span>Southeast Asia</span><small>Vietnam · Philippines</small>
+      </div>
     </div>
   </div>
 </section>
@@ -732,7 +752,9 @@ fbtns.forEach(b=>b.addEventListener('click',()=>{
   fbtns.forEach(x=>x.classList.remove('on'));b.classList.add('on');
   const f=b.dataset.f;
   document.querySelectorAll('.p-card').forEach(c=>{
-    c.classList.toggle('hide',f!=='all'&&c.dataset.cat!==f);
+    const show = f==='all'||c.dataset.cat===f;
+    if(show && c.classList.contains('hide')){c.style.animation='none';c.offsetHeight;c.style.animation='';}
+    c.classList.toggle('hide',!show);
   });
 }));
 </script>
