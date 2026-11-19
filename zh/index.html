@@ -94,6 +94,10 @@ section{padding:72px 0}
 .p-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:#d9c6ae}
 .p-img{background:#fff;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line)}
 .p-img img{width:100%;height:100%;object-fit:contain;padding:14px;transition:transform .25s}
+@supports not (aspect-ratio:1/1){
+  .p-img{position:relative;padding-top:100%}
+  .p-img img{position:absolute;inset:0}
+}
 .p-card:hover .p-img img{transform:scale(1.05)}
 .p-info{padding:14px 16px 16px;flex:1;display:flex;flex-direction:column;gap:5px}
 .p-name{font-size:14px;font-weight:800;line-height:1.35}
@@ -242,7 +246,7 @@ footer .brand,footer .brand small{color:#f3ece1}
     </div>
     <div class="p-grid" id="pgrid">
         <div class="p-card" data-cat="cassava">
-          <div class="p-img"><img src="../images/appliance/main/p02.jpg" alt="木薯捣碎机 1800W" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p02.jpg" alt="木薯捣碎机 1800W"></div>
           <div class="p-info">
             <div class="p-name">木薯捣碎机 1800W</div>
             <div class="p-meta"><span class="p-model">型号 YZ-HHJ-06</span> · 1800W</div>
@@ -250,7 +254,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="dough">
-          <div class="p-img"><img src="../images/appliance/main/p03.jpg" alt="和面机 7L" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p03.jpg" alt="和面机 7L"></div>
           <div class="p-info">
             <div class="p-name">和面机 7L</div>
             <div class="p-meta"><span class="p-model">型号 YZ-016FM</span> </div>
@@ -258,7 +262,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="dough">
-          <div class="p-img"><img src="../images/appliance/main/p04.jpg" alt="和面机 7L" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p04.jpg" alt="和面机 7L"></div>
           <div class="p-info">
             <div class="p-name">和面机 7L</div>
             <div class="p-meta"><span class="p-model">型号 YZ-1533</span> </div>
@@ -266,7 +270,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="dough">
-          <div class="p-img"><img src="../images/appliance/main/p05.jpg" alt="和面机 7L" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p05.jpg" alt="和面机 7L"></div>
           <div class="p-info">
             <div class="p-name">和面机 7L</div>
             <div class="p-meta"><span class="p-model">型号 YZ-028</span> </div>
@@ -274,7 +278,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p06.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p06.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-288</span> </div>
@@ -282,7 +286,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p07.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p07.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-201</span> </div>
@@ -290,7 +294,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p08.jpg" alt="绞肉机料理机 2L · 钢杯" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p08.jpg" alt="绞肉机料理机 2L · 钢杯"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机 2L · 钢杯</div>
             <div class="p-meta"><span class="p-model">型号 YZ-301</span> </div>
@@ -298,7 +302,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p09.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p09.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-403</span> </div>
@@ -306,7 +310,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p10.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p10.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-305</span> </div>
@@ -314,7 +318,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p11.jpg" alt="绞肉机料理机 2L · 玻璃杯" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p11.jpg" alt="绞肉机料理机 2L · 玻璃杯"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机 2L · 玻璃杯</div>
             <div class="p-meta"><span class="p-model">型号 YZ-306</span> </div>
@@ -322,7 +326,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p12.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p12.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-307</span> </div>
@@ -330,7 +334,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p13.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p13.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-309</span> </div>
@@ -338,7 +342,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p14.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p14.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-310</span> </div>
@@ -346,7 +350,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p15.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p15.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-311</span> </div>
@@ -354,7 +358,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p16.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p16.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-313</span> </div>
@@ -362,7 +366,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p17.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p17.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-313</span> </div>
@@ -370,7 +374,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p18.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p18.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-803</span> </div>
@@ -378,7 +382,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p19.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p19.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-315</span> </div>
@@ -386,7 +390,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p20.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p20.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-317</span> </div>
@@ -394,7 +398,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p21.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p21.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-318</span> </div>
@@ -402,7 +406,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p22.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p22.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-319</span> </div>
@@ -410,7 +414,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p23.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p23.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-320</span> </div>
@@ -418,7 +422,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p24.jpg" alt="绞肉机料理机 2L · 玻璃杯" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p24.jpg" alt="绞肉机料理机 2L · 玻璃杯"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机 2L · 玻璃杯</div>
             <div class="p-meta"><span class="p-model">型号 YZ-321</span> </div>
@@ -426,7 +430,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p25.jpg" alt="绞肉机料理机 2L · 玻璃杯" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p25.jpg" alt="绞肉机料理机 2L · 玻璃杯"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机 2L · 玻璃杯</div>
             <div class="p-meta"><span class="p-model">型号 YZ-323</span> </div>
@@ -434,7 +438,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p26.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p26.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-325</span> </div>
@@ -442,7 +446,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p27.jpg" alt="绞肉机料理机 3L · 玻璃杯" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p27.jpg" alt="绞肉机料理机 3L · 玻璃杯"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机 3L · 玻璃杯</div>
             <div class="p-meta"><span class="p-model">型号 YZ-416</span> </div>
@@ -450,7 +454,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p28.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p28.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-427</span> </div>
@@ -458,7 +462,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p29.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p29.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-329</span> </div>
@@ -466,7 +470,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p30.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p30.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-330</span> </div>
@@ -474,7 +478,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p31.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p31.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-426</span> </div>
@@ -482,7 +486,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p32.jpg" alt="绞肉机料理机 3L · 玻璃杯" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p32.jpg" alt="绞肉机料理机 3L · 玻璃杯"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机 3L · 玻璃杯</div>
             <div class="p-meta"><span class="p-model">型号 YZ-428</span> </div>
@@ -490,7 +494,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p33.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p33.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-501</span> </div>
@@ -498,7 +502,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p34.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p34.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-502</span> </div>
@@ -506,7 +510,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p35.jpg" alt="绞肉机料理机 2L · 钢杯" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p35.jpg" alt="绞肉机料理机 2L · 钢杯"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机 2L · 钢杯</div>
             <div class="p-meta"><span class="p-model">型号 YZ-505</span> </div>
@@ -514,7 +518,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p36.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p36.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-808</span> </div>
@@ -522,7 +526,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p37.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p37.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-509</span> </div>
@@ -530,7 +534,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p38.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p38.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-1001</span> </div>
@@ -538,7 +542,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p39.jpg" alt="绞肉机料理机 5L · 钢杯" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p39.jpg" alt="绞肉机料理机 5L · 钢杯"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机 5L · 钢杯</div>
             <div class="p-meta"><span class="p-model">型号 YZ-1002</span> </div>
@@ -546,7 +550,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p40.jpg" alt="绞肉机料理机 2L · 钢杯" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p40.jpg" alt="绞肉机料理机 2L · 钢杯"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机 2L · 钢杯</div>
             <div class="p-meta"><span class="p-model">型号 YZ-1003</span> </div>
@@ -554,7 +558,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p41.jpg" alt="绞肉机料理机 2L · 钢杯" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p41.jpg" alt="绞肉机料理机 2L · 钢杯"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机 2L · 钢杯</div>
             <div class="p-meta"><span class="p-model">型号 YZ-1005</span> </div>
@@ -562,7 +566,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p42.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p42.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-1606</span> </div>
@@ -570,7 +574,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p43.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p43.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-2002</span> </div>
@@ -578,7 +582,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p44.jpg" alt="绞肉机料理机 2L · 钢杯" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p44.jpg" alt="绞肉机料理机 2L · 钢杯"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机 2L · 钢杯</div>
             <div class="p-meta"><span class="p-model">型号 YZ-2201</span> </div>
@@ -586,7 +590,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p45.jpg" alt="绞肉机料理机 6L · 钢杯" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p45.jpg" alt="绞肉机料理机 6L · 钢杯"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机 6L · 钢杯</div>
             <div class="p-meta"><span class="p-model">型号 YZ-8806</span> </div>
@@ -594,7 +598,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p46.jpg" alt="绞肉机料理机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p46.jpg" alt="绞肉机料理机"></div>
           <div class="p-info">
             <div class="p-name">绞肉机料理机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-601</span> </div>
@@ -602,7 +606,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="noodle">
-          <div class="p-img"><img src="../images/appliance/main/p47.jpg" alt="面条枪 压面机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p47.jpg" alt="面条枪 压面机"></div>
           <div class="p-info">
             <div class="p-name">面条枪 压面机</div>
             <div class="p-meta"><span class="p-model">型号 YZ-8301</span> </div>
@@ -610,7 +614,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="steamer">
-          <div class="p-img"><img src="../images/appliance/main/p48.jpg" alt="电蒸锅" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p48.jpg" alt="电蒸锅"></div>
           <div class="p-info">
             <div class="p-name">电蒸锅</div>
             <div class="p-meta"><span class="p-model">型号 YZ-C005</span> </div>
@@ -618,7 +622,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="steamer">
-          <div class="p-img"><img src="../images/appliance/main/p49.jpg" alt="迷你豆浆机 1.6L" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p49.jpg" alt="迷你豆浆机 1.6L"></div>
           <div class="p-info">
             <div class="p-name">迷你豆浆机 1.6L</div>
             <div class="p-meta"><span class="p-model">型号 Rated</span> </div>
@@ -626,7 +630,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="grinder">
-          <div class="p-img"><img src="../images/appliance/main/p52.jpg" alt="搅拌机" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p52.jpg" alt="搅拌机"></div>
           <div class="p-info">
             <div class="p-name">搅拌机</div>
             <div class="p-meta"><span class="p-model">型号 Y66</span> </div>
@@ -634,7 +638,7 @@ footer .brand,footer .brand small{color:#f3ece1}
           </div>
         </div>
         <div class="p-card" data-cat="fryer">
-          <div class="p-img"><img src="../images/appliance/main/p53.jpg" alt="空气炸锅" loading="lazy"></div>
+          <div class="p-img"><img src="../images/appliance/main/p53.jpg" alt="空气炸锅"></div>
           <div class="p-info">
             <div class="p-name">空气炸锅</div>
             <div class="p-meta"><span class="p-model">型号 Rated</span> </div>
