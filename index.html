@@ -61,6 +61,11 @@ h1 .hl{color:var(--red)}
 .hero-visual{position:relative}
 .hero-visual img{border-radius:var(--radius);box-shadow:var(--shadow-lg);border:1px solid var(--line)}
 .hero-visual video{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 38%;display:block;border-radius:var(--radius);box-shadow:var(--shadow-lg);border:1px solid var(--line);background:#2b2320}
+.video-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;display:flex;align-items:center;gap:8px;background:rgba(28,20,16,.62);color:#fff;border:1.5px solid rgba(255,255,255,.85);border-radius:999px;padding:12px 20px;font:700 14px/1 inherit;font-family:inherit;cursor:pointer;backdrop-filter:blur(5px);box-shadow:0 8px 24px rgba(0,0,0,.28);transition:opacity .25s,transform .25s,background .2s}
+.video-play svg{width:19px;height:19px;fill:#fff;flex:none}
+.video-play:hover{background:rgba(28,20,16,.8);transform:translate(-50%,-50%) scale(1.04)}
+.video-play:active{transform:translate(-50%,-50%) scale(.97)}
+.video-play.gone{opacity:0;visibility:hidden;pointer-events:none}
 .float-chip{position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-lg);padding:10px 16px;font-size:13px;font-weight:700;display:flex;flex-direction:column;gap:1px;animation:float 4s ease-in-out infinite}
 .float-chip b{font-size:17px;color:var(--red)}
 .float-chip small{color:var(--slate);font-weight:600;font-size:11px}
@@ -355,6 +360,7 @@ button.fab-inquiry{border:none;cursor:pointer;font-family:inherit;line-height:1.
     </div>
     <div class="hero-visual">
       <video class="hero-video" src="images/video/coffee-ep5548.mp4" poster="images/philips/coffee-EP5548.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Philips automatic coffee machine in action"></video>
+      <button class="video-play" type="button" aria-label="Play product video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span>Play video</span></button>
       <div class="float-chip chip-1"><b>5 categories</b><small>Philips priority range</small></div>
       <div class="float-chip chip-2"><b>Philips</b><small>more models on request</small></div>
     </div>
@@ -1324,6 +1330,29 @@ fbtns.forEach(b=>b.addEventListener('click',()=>{
   if(toForm) toForm.addEventListener('click',function(){close();});
   load();paint();
   maybePop();
+})();
+</script>
+<script>
+(function(){
+  var v=document.querySelector('.hero-video'), b=document.querySelector('.video-play');
+  if(!v||!b) return;
+  var hide=function(){b.classList.add('gone');};
+  var show=function(){b.classList.remove('gone');};
+  var play=function(){
+    var p=v.play();
+    if(p&&p.then) p.then(hide).catch(show);
+    else if(!v.paused) hide();
+  };
+  v.addEventListener('playing',hide);
+  v.addEventListener('pause',function(){if(!v.ended) show();});
+  b.addEventListener('click',function(e){e.preventDefault();v.muted=true;play();});
+  v.addEventListener('click',play);
+  v.addEventListener('loadeddata',function(){if(v.paused) show();});
+  // watchdog: if the video hasn't actually advanced after 3s, force-show the play button
+  setTimeout(function(){
+    if(v.paused || v.currentTime < 0.2) show();
+  },3000);
+  play();
 })();
 </script>
 </body>
