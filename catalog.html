@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Philips Full-Range Catalog · 564 Models | Galileo</title>
+<meta name="description" content="Browse 564 Philips models in 12 categories. Search by model, view specs and enquire online.">
+<link rel="icon" href="images/favicon-galileo.png">
+<style>
+:root{
+  --coffee:#6f4e37; --coffee-dark:#4a3222; --coffee-deep:#3a2718;
+  --cream:#faf6f0; --cream-2:#f3ece1; --line:#e7ddd0;
+  --ink:#2d2418; --slate:#7a6c5a;
+  --red:#b5493a; --red-soft:#f7e8e5;
+  --radius:14px;
+  --shadow:0 1px 3px rgba(61,44,26,.06),0 8px 24px rgba(61,44,26,.05);
+  --shadow-lg:0 4px 12px rgba(61,44,26,.10),0 20px 44px rgba(61,44,26,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--coffee);text-decoration:none}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ===== Nav ===== */
+.nav{position:sticky;top:0;z-index:50;background:rgba(250,246,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--ink)}
+.brand-logo{height:38px;width:auto}
+.brand-badge{width:34px;height:34px;border-radius:9px;background:var(--coffee);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px}
+.brand small{display:block;font-size:10.5px;font-weight:500;color:var(--slate);letter-spacing:1px}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--slate);font-weight:600;font-size:14.5px;transition:color .15s}
+.nav-links a:hover{color:var(--coffee)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--coffee);color:#fff;font-weight:700;font-size:14.5px;padding:10px 20px;border-radius:10px;transition:background .15s,transform .15s;cursor:pointer;border:none}
+.btn:hover{background:var(--coffee-dark);transform:translateY(-1px)}
+.btn:active{transform:translateY(0) scale(.97)}
+.btn-red{background:var(--red)}
+.btn-red:hover{background:#993d30}
+.btn-red:active{transform:translateY(0) scale(.97)}
+.btn-outline{background:transparent;color:var(--coffee);border:2px solid var(--coffee)}
+.btn-outline:hover{background:var(--cream-2)}
+.nav-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--ink)}
+
+/* ===== Hero ===== */
+.hero{background:radial-gradient(900px 420px at 85% -10%,rgba(181,73,58,.07),transparent 60%),radial-gradient(800px 400px at 8% 10%,rgba(111,78,55,.08),transparent 55%),var(--cream);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:64px 0 56px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);color:var(--red);font-weight:700;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:7px 14px;border-radius:999px;box-shadow:var(--shadow)}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+h1{font-size:clamp(30px,4.6vw,50px);line-height:1.12;font-weight:800;letter-spacing:-.5px;margin:18px 0 16px}
+h1 .hl{color:var(--red)}
+.hero p.lead{font-size:17.5px;color:var(--slate);max-width:540px;margin-bottom:28px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.hero-points{display:flex;gap:22px;flex-wrap:wrap}
+.hero-points span{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--slate)}
+.hero-points svg{flex:none}
+.hero-visual{position:relative}
+.hero-visual img{border-radius:var(--radius);box-shadow:var(--shadow-lg);border:1px solid var(--line)}
+.float-chip{position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-lg);padding:10px 16px;font-size:13px;font-weight:700;display:flex;flex-direction:column;gap:1px;animation:float 4s ease-in-out infinite}
+.float-chip b{font-size:17px;color:var(--red)}
+.float-chip small{color:var(--slate);font-weight:600;font-size:11px}
+.chip-1{top:22px;left:-14px}
+.chip-2{bottom:26px;right:-10px;animation-delay:1.6s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* ===== Stats ===== */
+.stats{background:var(--coffee-deep);color:#f3ece1}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:34px 0;gap:18px;text-align:center}
+.stat b{font-size:clamp(24px,3vw,34px);font-weight:800;display:block}
+.stat b em{font-style:normal;color:#e8b4a8}
+.stat span{font-size:13px;color:#c9b8a4;font-weight:500}
+
+/* ===== Sections ===== */
+section{padding:72px 0}
+.section-head{text-align:center;max-width:700px;margin:0 auto 40px}
+.section-head .kicker{color:var(--red);font-weight:800;font-size:13px;letter-spacing:1.8px;text-transform:uppercase}
+.section-head h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.4px;margin:10px 0 12px}
+.section-head p{color:var(--slate);font-size:16.5px}
+
+/* ===== Filter ===== */
+.filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:34px}
+.filters button{border:1.5px solid var(--line);background:#fff;color:var(--slate);font-weight:700;font-size:13.5px;padding:8px 18px;border-radius:999px;cursor:pointer;transition:.15s}
+.filters button:hover{border-color:var(--coffee);color:var(--coffee)}
+.filters button.on{background:var(--coffee);border-color:var(--coffee);color:#fff}
+.filters button:active{transform:scale(.96)}
+
+/* ===== Product grid ===== */
+.p-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.p-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s,border-color .18s;display:flex;flex-direction:column}
+.p-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:#d9c6ae}
+.p-img{background:#fff;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line)}
+.p-img img{width:100%;height:100%;object-fit:contain;padding:14px;transition:transform .25s}
+@supports not (aspect-ratio:1/1){
+  .p-img{position:relative;padding-top:100%}
+  .p-img img{position:absolute;inset:0}
+}
+.p-card:hover .p-img img{transform:scale(1.05)}
+.p-info{padding:14px 16px 16px;flex:1;display:flex;flex-direction:column;gap:5px}
+.p-name{font-size:14px;font-weight:800;line-height:1.35}
+.p-meta{font-size:12px;color:var(--slate);font-weight:600}
+.p-model{color:var(--red)}
+.p-ask{margin-top:auto;padding-top:8px;font-size:13px;font-weight:700;color:var(--coffee)}
+.p-ask:hover{color:var(--red)}
+.p-card.hide{display:none}
+@keyframes cardIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.p-card{animation:cardIn .4s ease both}
+.p-card:nth-child(8n+2){animation-delay:.03s}.p-card:nth-child(8n+3){animation-delay:.06s}.p-card:nth-child(8n+4){animation-delay:.09s}.p-card:nth-child(8n+5){animation-delay:.12s}.p-card:nth-child(8n+6){animation-delay:.15s}.p-card:nth-child(8n+7){animation-delay:.18s}.p-card:nth-child(8n+8){animation-delay:.21s}
+
+/* ===== Robot section ===== */
+.robot-band{background:var(--cream-2)}
+.robot-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.r-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.r-card h3{font-size:17px;font-weight:800;margin-bottom:6px}
+.r-card .r-tag{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--red);text-transform:uppercase}
+.r-card p{font-size:13.5px;color:var(--slate);margin-top:6px}
+.r-card a{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700}
+
+/* ===== Markets ===== */
+.markets{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.market{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 16px;text-align:center;box-shadow:var(--shadow)}
+.m-ico{width:34px;height:34px;color:var(--red);margin:0 auto 10px;display:block}
+.market{transition:transform .15s}
+.market:hover{transform:translateY(-3px)}
+.market span{font-size:14px;font-weight:700}
+.market small{display:block;font-size:12px;color:var(--slate);margin-top:2px}
+
+
+/* ===== Footer ===== */
+footer{background:var(--coffee-deep);color:#c9b8a4}
+.foot-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding:30px 0}
+footer .brand,footer .brand small{color:#f3ece1}
+.foot-links{display:flex;gap:20px;font-size:13.5px}
+.foot-links a{color:#c9b8a4}
+.foot-links a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(243,236,225,.15);padding:16px 0;font-size:12.5px;text-align:center}
+
+/* ===== Progress / Backtop ===== */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--coffee),var(--red));z-index:100;transition:width .08s linear}
+.backtop{position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;background:var(--coffee);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 6px 22px rgba(111,78,55,.4);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;z-index:90}
+.backtop.show{opacity:1;visibility:visible;transform:none}
+.backtop:hover{background:var(--coffee-dark);transform:translateY(-3px)}
+
+/* ===== Reveal ===== */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+[id]{scroll-margin-top:84px}
+
+/* ===== Responsive ===== */
+@media(max-width:1020px){.p-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:960px){.hero-grid,.about-grid,.robot-cards{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.markets{grid-template-columns:repeat(2,1fr)}.hero-visual{order:-1}}
+@media(max-width:680px){.p-grid{grid-template-columns:repeat(2,1fr)}section{padding:52px 0}.backtop{right:14px;bottom:calc(14px + env(safe-area-inset-bottom))}}
+@media(max-width:640px){
+  .brand-logo{height:30px}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 0}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 24px}
+  .nav-links .btn{margin:10px 24px;justify-content:center}
+  .nav-toggle{display:block}
+}
+
+/* ===== C5 feature band (background photo) ===== */
+#robots{
+  position:relative;
+  min-height:clamp(440px,34vw,620px);
+  background-color:var(--cream-2);
+  background-image:
+    linear-gradient(90deg,rgba(250,246,240,.95) 0%,rgba(250,246,240,.76) 28%,rgba(250,246,240,.08) 62%,rgba(250,246,240,0) 100%),
+    url(images/robots/c5-bg.jpg);
+  background-repeat:no-repeat;
+  background-position:center,center;
+  background-size:100% 100%,cover;
+}
+#robots .container{position:relative;z-index:1}
+#robots .c5-head{text-align:left;max-width:520px;margin:0 0 28px}
+#robots .c5-cards{grid-template-columns:1fr;max-width:500px;margin:0}
+#robots .r-card{background:rgba(255,255,255,.94);backdrop-filter:blur(6px)}
+@media(max-width:960px){
+  #robots{
+    min-height:0;
+    background-image:
+      linear-gradient(180deg,rgba(250,246,240,.98) 0%,rgba(250,246,240,.93) 44%,rgba(250,246,240,.06) 64%,rgba(250,246,240,0) 100%),
+      url(images/robots/c5-bg-mobile.jpg);
+    background-size:100% 100%,100% auto;
+    background-position:center,center bottom;
+    padding-bottom:clamp(280px,74vw,540px);
+  }
+  #robots .c5-head{text-align:center;margin:0 auto 26px}
+  #robots .c5-cards{max-width:640px;margin:0 auto}
+}
+
+/* ===== Inquiry form ===== */
+.inq-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:44px;align-items:start}
+.inq-intro h2{font-size:clamp(24px,3vw,34px);font-weight:800;margin:10px 0 14px;letter-spacing:-.3px}
+.inq-intro p{color:var(--slate);font-size:15.5px;margin-bottom:10px}
+.inq-points{list-style:none;display:grid;gap:12px;margin-top:24px}
+.inq-points li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--slate);font-weight:600}
+.inq-points svg{width:19px;height:19px;flex:none;color:var(--red);margin-top:2px}
+.inq-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-lg)}
+.inq-card h3{font-size:20px;font-weight:800;margin-bottom:4px}
+.inq-card .inq-sub{font-size:12.5px;color:var(--slate);margin-bottom:20px}
+.inq-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.inq-fields .full{grid-column:1/-1}
+.fld label{display:block;font-size:12px;font-weight:700;color:var(--slate);margin-bottom:6px;letter-spacing:.2px}
+.fld label i{color:var(--red);font-style:normal}
+.fld input,.fld textarea{width:100%;border:1.5px solid var(--line);background:#fdfbf8;border-radius:9px;padding:10px 12px;font-size:14px;font-family:inherit;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--coffee);box-shadow:0 0 0 3px rgba(111,78,55,.10)}
+.fld input::placeholder,.fld textarea::placeholder{color:#a99b88}
+.fld textarea{min-height:98px;resize:vertical}
+.inq-hint{display:none;background:var(--red-soft);border:1px solid #ecd2cc;color:var(--red);font-size:12.5px;font-weight:700;padding:9px 12px;border-radius:8px;margin-bottom:14px}
+.inq-hint.show{display:block}
+.inq-submit{width:100%;justify-content:center;font-size:15px;padding:12px 20px;margin-top:18px}
+.inq-submit:disabled{opacity:.65;cursor:wait}
+.inq-status{display:none;border-radius:10px;padding:13px 15px;font-size:13.5px;font-weight:700;margin-top:14px;line-height:1.5}
+.inq-status.ok{display:block;background:#eef4e9;color:#3f6b36;border:1px solid #d8e6ce}
+.inq-status.warn{display:block;background:var(--red-soft);color:var(--red);border:1px solid #ecd2cc}
+.inq-note{font-size:12px;color:var(--slate);margin-top:12px;text-align:center;line-height:1.5}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+
+/* ===== Floating inquiry button ===== */
+.fab-inquiry{position:fixed;right:22px;bottom:26px;z-index:91;display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-size:13.5px;font-weight:700;padding:11px 17px;border-radius:999px;box-shadow:0 6px 22px rgba(181,73,58,.34);transition:background .15s,transform .15s}
+.fab-inquiry:hover{background:#993d30;transform:translateY(-2px);color:#fff}
+.fab-inquiry:active{transform:scale(.96)}
+.fab-inquiry svg{width:17px;height:17px;flex:none}
+.backtop{bottom:84px}
+@media(max-width:960px){.inq-grid{grid-template-columns:1fr;gap:28px}}
+@media(max-width:680px){
+  .inq-fields{grid-template-columns:1fr}
+  .inq-card{padding:20px}
+  .fab-inquiry{right:14px;bottom:calc(14px + env(safe-area-inset-bottom));padding:13px}
+  .fab-inquiry span{display:none}
+  .backtop{bottom:calc(78px + env(safe-area-inset-bottom))}
+  .fab-inquiry{transition:opacity .2s,visibility .2s,background .15s,transform .15s}
+  body.inq-near .backtop{bottom:calc(14px + env(safe-area-inset-bottom))}
+}
+
+
+/* Fallback: show the composed inquiry so it can be copied even without a mail app */
+.inq-fallback{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:12.5px;font-weight:500;line-height:1.55;background:#fff;border:1px solid #ecd2cc;border-radius:8px;padding:10px 12px;margin-top:10px;max-height:220px;overflow:auto;color:var(--ink)}
+.inq-mail{display:inline-flex;margin-top:10px;font-size:13px;padding:8px 16px}
+
+/* ===== Live chat widget ===== */
+.chat-panel{position:fixed;right:22px;bottom:94px;z-index:96;width:360px;max-width:calc(100vw - 28px);height:min(580px,calc(100vh - 130px));background:var(--cream);border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 60px rgba(61,44,26,.20),0 2px 8px rgba(61,44,26,.08);display:flex;flex-direction:column;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(10px) scale(.985);transition:opacity .2s,transform .2s,visibility .2s}
+body.chat-open .chat-panel{opacity:1;visibility:visible;transform:none}
+.chat-head{flex:none;display:flex;align-items:center;gap:11px;padding:14px 15px;background:linear-gradient(135deg,var(--coffee-deep),var(--coffee));color:#fff}
+.chat-avatar{width:38px;height:38px;border-radius:50%;background:#fff;color:var(--coffee);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;flex:none}
+.chat-head-txt{min-width:0;flex:1}
+.chat-head-txt strong{display:block;font-size:14.5px;line-height:1.3}
+.chat-head-txt span{display:flex;align-items:center;gap:6px;font-size:11.5px;opacity:.84;font-weight:600}
+.chat-live{width:7px;height:7px;border-radius:50%;background:#7ed6a5;flex:none}
+.chat-close{width:32px;height:32px;border:none;background:rgba(255,255,255,.14);color:#fff;border-radius:8px;font-size:20px;line-height:1;cursor:pointer;flex:none}
+.chat-close:hover{background:rgba(255,255,255,.26)}
+.chat-close:active{transform:scale(.92)}
+.chat-body{flex:1;overflow-y:auto;padding:16px 14px 8px;background:#f7f2ea;scrollbar-width:thin}
+.chat-day{text-align:center;font-size:11px;color:#a99b88;font-weight:700;margin-bottom:14px}
+.chat-msg{max-width:84%;margin-bottom:10px;font-size:13.5px;line-height:1.55;padding:10px 13px;border-radius:14px;word-break:break-word;white-space:pre-wrap}
+.chat-msg.bot{background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px;color:var(--ink);box-shadow:0 1px 2px rgba(61,44,26,.04)}
+.chat-msg.me{background:var(--red);color:#fff;border-bottom-right-radius:4px;margin-left:auto}
+.chat-msg small{display:block;font-size:10.5px;opacity:.6;margin-top:5px}
+.chat-model{display:none;background:#fff;border:1px dashed #d9c9b6;border-radius:8px;font-size:12px;color:var(--slate);padding:8px 10px;margin-bottom:12px;line-height:1.5}
+.chat-model.show{display:block}
+.chat-model b{color:var(--ink)}
+.chat-quick{display:flex;flex-wrap:wrap;gap:7px;margin:4px 0 14px}
+.chat-quick button{background:#fff;border:1px solid #d9c9b6;color:var(--coffee);font-size:12px;font-weight:700;padding:7px 11px;border-radius:999px;cursor:pointer;font-family:inherit}
+.chat-quick button:hover{background:var(--red-soft);border-color:var(--red)}
+.chat-quick button:active{transform:scale(.96)}
+.chat-foot{flex:none;border-top:1px solid var(--line);background:#fff;padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
+.chat-email{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.chat-email label{font-size:11.5px;color:var(--slate);font-weight:700;white-space:nowrap}
+.chat-email input{flex:1;min-width:0;border:1px solid var(--line);border-radius:8px;padding:7px 9px;font-size:12.5px;font-family:inherit;color:var(--ink);background:#fdfbf8}
+.chat-email input:focus{outline:none;border-color:var(--coffee)}
+.chat-input{display:flex;align-items:flex-end;gap:8px}
+.chat-input textarea{flex:1;min-width:0;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-size:13.5px;font-family:inherit;color:var(--ink);background:#fdfbf8;resize:none;height:42px;max-height:96px;line-height:1.5}
+.chat-input textarea:focus{outline:none;border-color:var(--coffee)}
+.chat-input textarea::placeholder{color:#a99b88}
+.chat-send{width:42px;height:42px;flex:none;border:none;border-radius:10px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.chat-send:hover{background:#993d30}
+.chat-send:active{transform:scale(.94)}
+.chat-send svg{width:19px;height:19px}
+.chat-alt{font-size:11px;color:var(--slate);margin-top:8px;text-align:center;line-height:1.5}
+.chat-alt a{font-weight:700;color:var(--coffee)}
+.chat-alert{display:none;background:var(--red-soft);border:1px solid #ecd2cc;border-radius:9px;padding:9px 10px;margin-bottom:8px;font-size:12px;color:var(--red);font-weight:700;line-height:1.5}
+.chat-alert.show{display:block}
+.chat-alert a{display:table;margin-top:7px;background:var(--red);color:#fff;border-radius:7px;padding:6px 11px;font-size:12px;font-weight:700}
+body.chat-open .fab-inquiry{opacity:0;visibility:hidden;pointer-events:none}
+button.fab-inquiry{border:none;cursor:pointer;font-family:inherit;line-height:1.2}
+
+/* proactive message popup + unread badge + send toast */
+.chat-pop{position:fixed;right:22px;bottom:94px;z-index:95;width:322px;max-width:calc(100vw - 28px);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);padding:14px 15px 13px;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .25s,transform .25s,visibility .25s}
+.chat-pop.show{opacity:1;visibility:visible;transform:none}
+.chat-pop-hd{display:flex;align-items:center;gap:9px;margin-bottom:9px}
+.chat-pop-hd .chat-avatar{width:32px;height:32px;font-size:14px}
+.chat-pop-hd strong{font-size:13.5px;display:block;line-height:1.3}
+.chat-pop-hd span{font-size:11px;color:var(--slate);display:flex;align-items:center;gap:5px;font-weight:600}
+.chat-pop p{font-size:13px;line-height:1.6;color:var(--ink);margin:0 0 12px}
+.chat-pop-act{display:flex;gap:8px;align-items:center}
+.chat-pop-act .btn{flex:1;justify-content:center;font-size:13px;padding:9px 14px}
+.chat-pop-x{border:none;background:transparent;color:var(--slate);font-size:18px;line-height:1;cursor:pointer;padding:4px 8px;font-family:inherit}
+.chat-pop-x:hover{color:var(--ink)}
+.chat-pop-x:active{transform:scale(.92)}
+.chat-badge{position:absolute;top:-6px;right:-6px;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:#e0a83a;color:#fff;font-size:11px;font-weight:800;line-height:18px;text-align:center;box-shadow:0 0 0 2px #fff;display:none}
+.chat-badge.show{display:block}
+.chat-toast{position:fixed;left:50%;top:80px;transform:translate(-50%,-12px);z-index:120;background:var(--coffee-deep);color:#fff;border-radius:999px;padding:9px 18px;font-size:13px;font-weight:700;box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s;pointer-events:none;white-space:nowrap;max-width:calc(100vw - 28px);overflow:hidden;text-overflow:ellipsis}
+.chat-toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+@media(max-width:680px){
+  .chat-pop{right:10px;left:10px;bottom:calc(76px + env(safe-area-inset-bottom));width:auto;max-width:none}
+}
+@media(max-width:680px){
+  .chat-panel{right:0;left:0;bottom:0;top:0;width:100%;max-width:none;height:100%;height:100dvh;border-radius:0;border:none}
+  .chat-head{padding-top:calc(14px + env(safe-area-inset-top))}
+  .backtop{bottom:calc(78px + env(safe-area-inset-bottom))}
+}
+
+
+/* ===== Full catalog ===== */
+.cat-hero{background:linear-gradient(180deg,var(--cream-2),var(--cream));border-bottom:1px solid var(--line);padding:38px 0 30px}
+.cat-crumb{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);font-weight:700;margin-bottom:12px}
+.cat-hero h1{font-size:clamp(26px,4vw,42px);line-height:1.18;letter-spacing:-.02em;margin:0 0 10px}
+.cat-hero p{color:var(--slate);max-width:720px;font-size:15px}
+.cat-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.cat-stats span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:12px;font-weight:700;color:var(--coffee)}
+.cat-tools{position:sticky;top:64px;z-index:40;background:rgba(250,246,240,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:12px 0}
+.cat-search{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:0 12px;height:42px;box-shadow:var(--shadow)}
+.cat-search svg{width:17px;height:17px;color:var(--slate);flex:none}
+.cat-search input{border:0;outline:0;background:transparent;font-size:14px;width:100%;color:var(--ink)}
+.cat-search button{border:0;background:transparent;color:var(--slate);font-size:18px;cursor:pointer;display:none;padding:0 2px}
+.cat-search button.show{display:block}
+.cat-row{display:flex;align-items:center;gap:8px;margin-top:10px}
+.cat-row-label{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--slate);text-transform:uppercase;white-space:nowrap;min-width:64px}
+.cat-chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.cat-chips::-webkit-scrollbar{display:none}
+.cat-chip{border:1px solid var(--line);background:#fff;color:var(--coffee);border-radius:999px;padding:6px 12px;font-size:12px;font-weight:700;white-space:nowrap;cursor:pointer;transition:background .16s,color .16s,border-color .16s,transform .1s}
+.cat-chip:hover{border-color:var(--red);color:var(--red)}
+.cat-chip:active{transform:scale(.96)}
+.cat-chip.on{background:var(--red);border-color:var(--red);color:#fff}
+.cat-chip em{font-style:normal;opacity:.65;margin-left:4px;font-size:11px}
+.cat-subrow{display:none}
+.cat-subrow.show{display:flex}
+.cat-toolright{margin-left:auto;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.cat-toggle{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 11px;font-size:12px;font-weight:700;color:var(--coffee);cursor:pointer}
+.cat-toggle.on{background:var(--coffee);border-color:var(--coffee);color:#fff}
+.cat-count{font-size:12px;color:var(--slate);font-weight:700}
+.cat-main{padding:22px 0 60px;min-height:50vh}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.pc-card{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px;cursor:pointer;transition:box-shadow .18s,transform .18s,border-color .18s;min-width:0;animation:cardIn .28s ease both}
+.pc-card:hover{box-shadow:var(--shadow-lg);border-color:#d9bda9;transform:translateY(-2px)}
+.pc-thumb{width:74px;height:74px;flex:none;border-radius:9px;background:var(--cream-2);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pc-thumb img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.pc-thumb span{font-size:13px;font-weight:800;color:#b9a48e;letter-spacing:.02em}
+.pc-body{min-width:0;flex:1}
+.pc-model{font-size:14px;font-weight:800;letter-spacing:.01em;color:var(--coffee-deep);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pc-name{font-size:12px;color:var(--slate);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px}
+.pc-point{font-size:12px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:5px;opacity:.86}
+.pc-cat{font-size:10px;color:var(--slate);opacity:.8;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pc-ask{flex:none;width:30px;height:30px;border:1px solid var(--line);border-radius:50%;background:var(--cream);color:var(--red);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s,color .15s}
+.pc-ask:hover{background:var(--red);color:#fff}
+.pc-ask svg{width:15px;height:15px}
+.cat-empty{text-align:center;padding:70px 20px;color:var(--slate)}
+.cat-empty strong{display:block;color:var(--ink);font-size:17px;margin-bottom:6px}
+.cat-more{display:block;margin:26px auto 0;background:#fff;border:1px solid var(--line);border-radius:999px;padding:11px 26px;font-size:13px;font-weight:800;color:var(--coffee);cursor:pointer;box-shadow:var(--shadow)}
+.cat-more:hover{border-color:var(--red);color:var(--red)}
+.cat-more:active{transform:scale(.98)}
+/* detail sheet */
+.pm-wrap{position:fixed;inset:0;z-index:130;background:rgba(35,25,14,.5);display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(3px)}
+.pm-wrap.show{display:flex}
+.pm-box{background:var(--cream);border-radius:16px;width:min(760px,100%);max-height:min(86vh,820px);overflow:auto;box-shadow:var(--shadow-lg);position:relative}
+.pm-close{position:absolute;right:12px;top:10px;border:0;background:rgba(255,255,255,.85);width:32px;height:32px;border-radius:50%;font-size:21px;line-height:1;color:var(--coffee);cursor:pointer;z-index:2}
+.pm-top{display:grid;grid-template-columns:240px 1fr;gap:20px;padding:24px 24px 18px;border-bottom:1px solid var(--line)}
+.pm-img{background:#fff;border:1px solid var(--line);border-radius:12px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pm-img img{max-width:92%;max-height:92%;object-fit:contain;mix-blend-mode:multiply}
+.pm-img span{font-size:16px;font-weight:800;color:#b9a48e}
+.pm-kicker{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);font-weight:800}
+.pm-model{font-size:clamp(19px,3vw,27px);font-weight:800;color:var(--coffee-deep);letter-spacing:-.01em;line-height:1.2;margin:5px 0 4px;word-break:break-word}
+.pm-name{font-size:13px;color:var(--slate);margin-bottom:12px}
+.pm-points{list-style:none;display:grid;gap:5px}
+.pm-points li{position:relative;padding-left:16px;font-size:13px;line-height:1.5}
+.pm-points li:before{content:'';position:absolute;left:2px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--red)}
+.pm-sec{padding:18px 24px}
+.pm-sec h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-bottom:10px}
+.pm-spec{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.pm-spec div{display:grid;grid-template-columns:130px 1fr;border-bottom:1px solid var(--line);font-size:13px}
+.pm-spec div:last-child{border-bottom:0}
+.pm-spec b{background:var(--cream-2);padding:9px 12px;font-weight:700;color:var(--slate)}
+.pm-spec span{padding:9px 12px;word-break:break-word}
+.pm-foot{padding:0 24px 24px;display:flex;gap:10px;flex-wrap:wrap}
+.pm-foot .btn{border:0;cursor:pointer}
+@media(max-width:700px){
+  .cat-row{flex-wrap:wrap}
+  .cat-row-label{width:100%;flex:none}
+  .cat-chips{width:100%}
+  .cat-tools{top:56px}
+  .cat-hero{padding:26px 0 22px}
+  .cat-grid{grid-template-columns:1fr}
+  .cat-row-label{min-width:0}
+  .cat-toolright{width:100%;margin-left:0;justify-content:space-between}
+  .pm-wrap{padding:0;align-items:flex-end}
+  .pm-box{border-radius:16px 16px 0 0;max-height:92vh;width:100%}
+  .pm-top{grid-template-columns:130px 1fr;gap:14px;padding:20px 16px 14px}
+  .pm-sec{padding:16px}
+  .pm-foot{padding:0 16px 18px}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html#top">
+      <img src="images/galileo-logo.png" alt="Galileo" class="brand-logo">
+    </a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <div class="nav-links" id="navlinks">
+      <a href="index.html#products">Products</a>
+      <a href="index.html#robots">Cleaning Robots</a>
+      <a href="index.html#markets">Markets</a>
+      <a href="index.html#inquiry">Inquiry</a>
+      <a href="zh/catalog.html" style="border:1.5px solid var(--line);border-radius:999px;padding:5px 13px;font-size:13px;font-weight:700">中文</a>
+      <a class="btn btn-red" href="index.html#inquiry">Get a Quote</a>
+    </div>
+  </div>
+</nav>
+<section class="cat-hero" id="top">
+  <div class="container">
+    <div class="cat-crumb" data-i="crumb">HOME / FULL CATALOG</div>
+    <h1 data-i="h1">Philips Full-Range Catalog</h1>
+    <p data-i="lead">Browse by category, search a model number, then tap any product to see its key features and specifications. Need a quote? Send the model straight to our sales team.</p>
+    <div class="cat-stats"><span data-i="s1">12 categories</span><span data-i="s2">47 subcategories</span><span data-i="s3">564 models</span></div>
+  </div>
+</section>
+<div class="cat-tools">
+  <div class="container">
+    <div class="cat-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="catQ" type="search" autocomplete="off" data-i-ph="searchPh" placeholder="Search model / keyword…">
+      <button id="catClear" type="button" aria-label="Clear">&times;</button>
+    </div>
+    <div class="cat-row">
+      <span class="cat-row-label" data-i="catLabel">Category</span>
+      <div class="cat-chips" id="catCats"></div>
+    </div>
+    <div class="cat-row cat-subrow show" id="catSubRow">
+      <span class="cat-row-label" data-i="subLabel">Type</span>
+      <div class="cat-chips" id="catSubs"></div>
+    </div>
+    <div class="cat-toolright">
+      <button class="cat-toggle" id="catPhoto" type="button" data-i="photo">With photo only</button>
+      <span class="cat-count" id="catCount"></span>
+    </div>
+  </div>
+</div>
+<main class="cat-main">
+  <div class="container">
+    <div class="cat-grid" id="catGrid"></div>
+    <button class="cat-more" id="catMore" type="button" data-i="more">Load more products</button>
+  </div>
+</main>
+<div class="pm-wrap" id="pmWrap" role="dialog" aria-modal="true" aria-label="Product details">
+  <div class="pm-box" id="pmBox">
+    <button class="pm-close" id="pmClose" aria-label="Close">&times;</button>
+    <div id="pmContent"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="container foot-grid">
+    <a class="brand" href="index.html#top"><img src="images/galileo-logo.png" alt="Galileo" class="brand-logo" style="height:32px;filter:brightness(0) invert(1) opacity(.92)"></a>
+    <div class="foot-links">
+      <a href="index.html#products">Products</a><a href="index.html#robots">Robots</a><a href="index.html#markets">Markets</a><a href="index.html#inquiry">Inquiry</a>
+      <a href="zh/catalog.html" style="border:1.5px solid var(--line);border-radius:999px;padding:5px 13px;font-size:13px;font-weight:700">中文</a>
+    </div>
+  </div>
+  <div class="foot-bottom container">© 2026 Galileo — Hangzhou, Zhejiang, China. All rights reserved.</div>
+</footer>
+
+<div class="progress" id="progressBar"></div>
+<div class="chat-pop" id="chatPop" role="status" aria-live="polite">
+  <div class="chat-pop-hd"><div class="chat-avatar">G</div><div><strong>Galileo Sales Team</strong><span><i class="chat-live"></i>Online now</span></div></div>
+  <p>Looking for a quote, specs or samples? Leave a message here and we'll get back to you shortly.</p>
+  <div class="chat-pop-act"><button class="btn btn-red" id="chatPopGo" type="button">Start a chat</button><button class="chat-pop-x" id="chatPopX" aria-label="Dismiss">&times;</button></div>
+</div>
+<button class="fab-inquiry" id="chatLaunch" aria-label="Open live chat" aria-expanded="false" aria-controls="chatPanel"><b class="chat-badge" id="chatBadge"></b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg><span>Chat with us</span></button>
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Open live chat">
+  <div class="chat-head">
+    <div class="chat-avatar">G</div>
+    <div class="chat-head-txt"><strong>Galileo Sales Team</strong><span><i class="chat-live"></i>Typically replies within a few hours</span></div>
+    <button class="chat-close" id="chatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-day">Today</div>
+    <div class="chat-msg bot">Hi, welcome to Galileo. Ask us about Philips appliances, the C5 cleaning robot, OEM branding, samples or shipping — just type here.</div>
+    <div class="chat-model" id="chatModel"></div>
+    <div class="chat-quick" id="chatQuick"></div>
+  </div>
+  <div class="chat-foot">
+    <div class="chat-alert" id="chatAlert"></div>
+    <div class="chat-email"><label for="chatEmail">Your email</label><input id="chatEmail" type="email" autocomplete="email" placeholder="name@company.com (optional)"></div>
+    <div class="chat-input"><textarea id="chatText" rows="1" placeholder="Type your message…"></textarea><button class="chat-send" id="chatSend" aria-label="Send message"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></button></div>
+    <div class="chat-alt">Prefer email? <a href="mailto:2305960967@qq.com" data-direct="1">2305960967@qq.com</a> · <a href="#inquiry" id="chatToForm">Detailed inquiry form</a></div>
+  </div>
+</div>
+<div class="chat-toast" id="chatToast" role="status" aria-live="polite"></div>
+<button class="backtop" id="backTop" aria-label="Back to top">↑</button>
+
+<script src="catalog-data.js"></script>
+<script>
+const pb=document.getElementById('progressBar'),bt=document.getElementById('backTop');
+window.addEventListener('scroll',()=>{
+  const st=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight;
+  pb.style.width=(st/h*100)+'%';
+  bt.classList.toggle('show',st>600);
+},{passive:true});
+bt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+// 产品筛选
+const fbtns=document.querySelectorAll('#filters button');
+fbtns.forEach(b=>b.addEventListener('click',()=>{
+  fbtns.forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  const f=b.dataset.f;
+  document.querySelectorAll('.p-card').forEach(c=>{
+    const show = f==='all'||c.dataset.cat===f;
+    if(show && c.classList.contains('hide')){c.style.animation='none';c.offsetHeight;c.style.animation='';}
+    c.classList.toggle('hide',!show);
+  });
+}));
+
+// ===== In-page inquiry =====
+(function(){
+  var ZH = document.documentElement.lang.indexOf('zh')===0;
+  var T = ZH ? {
+    sending:'正在发送…', send:'发送询盘 →',
+    ok:'询盘已发送，我们会尽快回复你。',
+    warn:'在线提交未成功，已为你打开邮箱草稿，请直接点击发送即可。',
+    hint:'已为你带入产品：'
+  } : {
+    sending:'Sending…', send:'Send Inquiry →',
+    ok:'Your inquiry has been sent. We will get back to you shortly.',
+    warn:'Online submission failed. An email draft has been opened — please just press send.',
+    hint:'Added to your inquiry: ', mailbtn:'Open email app'
+  };
+  var form=document.getElementById('inquiryForm');
+  if(!form) return;
+  var btn=document.getElementById('fSubmit'), box=document.getElementById('formStatus');
+  var prod=document.getElementById('fProduct'), hint=document.getElementById('fProductHint');
+  var sec=document.getElementById('inquiry');
+
+  function subjectFrom(a){
+    try{
+      var u=new URL(a.href, location.href);
+      var s=u.searchParams.get('subject')||'';
+      return s.replace(/^\s*(Inquiry|询价)\s*[:：]\s*/i,'').trim();
+    }catch(e){ return ''; }
+  }
+  function openInquiry(subject){
+    if(subject){
+      prod.value=subject;
+      hint.textContent=T.hint+subject;
+      hint.classList.add('show');
+    }
+    if(window.GalileoChat){ window.GalileoChat.open(subject||''); return; }
+    sec.scrollIntoView({behavior:'smooth',block:'start'});
+    setTimeout(function(){
+      var n=document.getElementById('fName'), m=document.getElementById('fMessage');
+      var target=(n && !n.value)?n:m;
+      if(target) target.focus({preventScroll:true});
+    },650);
+  }
+  // Every mailto inquiry entry now opens the in-page form and carries the model number.
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+    a.addEventListener('click',function(e){ if(a.closest && a.closest('#chatPanel')) return; e.preventDefault(); openInquiry(subjectFrom(a)); });
+  });
+
+
+  // On phones, hide the floating inquiry button once the form section is near —
+  // it would otherwise cover the footer / the fields the visitor is filling in.
+  var fab=document.querySelector('.fab-inquiry');
+  if(fab && window.matchMedia('(max-width:680px)').matches){
+    var syncFab=function(){
+      var r=sec.getBoundingClientRect();
+      document.body.classList.remove('inq-near');
+    };
+    window.addEventListener('scroll',syncFab,{passive:true});
+    window.addEventListener('resize',syncFab);
+    syncFab();
+  }
+
+  form.addEventListener('submit',async function(e){
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+    var data={};
+    new FormData(form).forEach(function(v,k){ data[k]=v; });
+    data._subject='[Galileo Web Inquiry] '+(data.product||(ZH?'通用询盘':'General inquiry'))+' — '+(data.country||'');
+    data._replyto=data.email;
+    data._captcha='false';
+    data._template='table';
+    data.page=location.href;
+    btn.disabled=true; btn.textContent=T.sending;
+    box.className='inq-status'; box.textContent='';
+    var ok=false;
+    try{
+      var ctrl=new AbortController();
+      var timer=setTimeout(function(){ctrl.abort();},12000);
+      var res=await fetch('https://formsubmit.co/ajax/2305960967@qq.com',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify(data), signal:ctrl.signal
+      });
+      clearTimeout(timer);
+      var reply=await res.json().catch(function(){return null;});
+      // FormSubmit may answer HTTP 200 with {"success":"false"} — treat that as a failure.
+      ok=res.ok && !!reply && (reply.success==='true' || reply.success===true);
+    }catch(err){ ok=false; }
+    if(ok){
+      box.textContent=T.ok; box.className='inq-status ok';
+      form.reset(); hint.classList.remove('show'); hint.textContent='';
+    }else{
+      box.textContent=''; box.className='inq-status warn';
+      var head=document.createElement('div'); head.textContent=T.warn; box.appendChild(head);
+      var lines=[
+        'Name: '+(data.name||''), 'Company: '+(data.company||''),
+        'Email: '+(data.email||''), 'WhatsApp / Phone: '+(data.phone||''),
+        'Country: '+(data.country||''), 'Product / Model: '+(data.product||''),
+        'Quantity: '+(data.quantity||''), 'Destination port: '+(data.port||''),
+        '', 'Message:', (data.message||'')
+      ];
+      var pre=document.createElement('pre'); pre.className='inq-fallback';
+      pre.textContent=lines.join('\n'); box.appendChild(pre);
+      var mailto='mailto:2305960967@qq.com?subject='+
+        encodeURIComponent('[Galileo Inquiry] '+(data.product||''))+
+        '&body='+encodeURIComponent(lines.join('\n'));
+      var link=document.createElement('a'); link.className='btn btn-outline inq-mail';
+      link.href=mailto; link.textContent=T.mailbtn; box.appendChild(link);
+      window.location.href=mailto;
+    }
+    btn.disabled=false; btn.textContent=T.send;
+  });
+})();
+
+
+// ===== Live chat widget =====
+(function(){
+  var ZH=document.documentElement.lang.indexOf('zh')===0;
+  var T=ZH?{
+    welcome:'你好，欢迎咨询伽利略。飞利浦家电、C5 清洁机器人、贴牌 OEM、寄样、发货交期，都可以直接在这里打字问我们。',
+    quick:['索取产品目录与资料','询问起订量与交期','了解 OEM / ODM 贴牌','咨询 C5 清洁机器人'],
+    reply:'收到，你的消息已经转给业务同事，我们会尽快回复。方便的话留个邮箱，方便我们回你。',
+    modelHint:'已带入产品：',
+    preA:'我想了解 ', preB:' 的资料、报价与交期。',
+    alert:'在线通道暂时不可用。你的对话已保存在本窗口，点下面按钮可一键用邮件把整段对话发给我们。',
+    alertBtn:'用邮件发送这段对话',
+    subj:'[伽利略在线聊天] ',
+    visitor:'网站访客', customer:'客户', us:'伽利略', page:'页面',
+    toastSent:'消息已发送，我们会尽快回复你'
+  }:{
+    welcome:'Hi, welcome to Galileo. Ask us about Philips appliances, the C5 cleaning robot, OEM branding, samples or shipping — just type here.',
+    quick:['Send me the product catalog','Ask about MOQ and lead time','OEM / ODM branding','About the C5 cleaning robot'],
+    reply:'Thanks for reaching out — we will get back to you shortly. Leaving an email helps us reply faster.',
+    modelHint:'Product added: ',
+    preA:'I would like details, pricing and lead time for ', preB:'.',
+    alert:'Online channel unavailable. Tap below to email this chat to us.',
+    alertBtn:'Email this conversation',
+    subj:'[Galileo Live Chat] ',
+    visitor:'Website visitor', customer:'Visitor', us:'Galileo', page:'Page',
+    toastSent:'Message sent — we will reply shortly',
+    popSeen:'galileo_pop_seen'
+  };
+  var KEY='galileo_chat_v1';
+  var launch=document.getElementById('chatLaunch'), panel=document.getElementById('chatPanel');
+  var body=document.getElementById('chatBody'), quick=document.getElementById('chatQuick');
+  var modelBox=document.getElementById('chatModel'), alertBox=document.getElementById('chatAlert');
+  var text=document.getElementById('chatText'), sendBtn=document.getElementById('chatSend');
+  var email=document.getElementById('chatEmail');
+  if(!launch||!panel) return;
+  var curModel='', down=false, replied=false, msgs=[];
+
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function hhmm(){var d=new Date();return ('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2);}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify({m:msgs,e:email.value||'',d:curModel}));}catch(e){}}
+  function load(){
+    try{
+      var raw=JSON.parse(localStorage.getItem(KEY)||'null');
+      if(raw&&raw.m&&raw.m.length){msgs=raw.m;email.value=raw.e||'';curModel=raw.d||'';}
+    }catch(e){}
+    if(!msgs.length) msgs=[{role:'bot',text:T.welcome,t:hhmm()}];
+    if(msgs.some(function(m){return m.role==='me';})){replied=true;hideQuick();}
+    if(curModel) showModel(curModel);
+  }
+  function showModel(m){
+    modelBox.innerHTML=T.modelHint+'<b>'+esc(m)+'</b>';
+    modelBox.classList.add('show');
+  }
+  function hideQuick(){quick.style.display='none';}
+  function paint(){
+    Array.prototype.forEach.call(body.querySelectorAll('.chat-msg'),function(n){n.remove();});
+    msgs.forEach(function(m){
+      var d=document.createElement('div');
+      d.className='chat-msg '+(m.role==='me'?'me':'bot');
+      d.textContent=m.text;
+      if(m.t){var s=document.createElement('small');s.textContent=m.t;d.appendChild(s);}
+      body.insertBefore(d,quick);
+    });
+    body.scrollTop=body.scrollHeight;
+  }
+  function push(role,txt){msgs.push({role:role,text:txt,t:hhmm()});paint();save();}
+  function transcript(){
+    var lines=msgs.map(function(m){return (m.role==='me'?T.customer:T.us)+' ['+(m.t||'')+']: '+m.text;});
+    lines.push('',T.page+': '+location.href,'Email: '+(email.value||'—'));
+    if(curModel) lines.push('Product: '+curModel);
+    return lines.join('\n');
+  }
+  function updateMail(){
+    var a=alertBox.querySelector('a');
+    if(!a){a=document.createElement('a');a.textContent=T.alertBtn;alertBox.appendChild(a);}
+    a.href='mailto:2305960967@qq.com?subject='+encodeURIComponent(T.subj+(curModel||(ZH?'网页咨询':'Website chat')))+
+           '&body='+encodeURIComponent(transcript());
+  }
+  function fail(){
+    if(down) return;
+    down=true;
+    alertBox.textContent=T.alert;
+    alertBox.classList.add('show');
+    updateMail();
+  }
+  function deliver(){
+    if(down){updateMail();return;}
+    var data={
+      _subject:T.subj+(curModel||(ZH?'网页咨询':'Website chat')),
+      _captcha:'false',_template:'table',
+      name:(email.value||'').split('@')[0]||T.visitor,
+      email:email.value||'',
+      page:location.href,
+      message:transcript()
+    };
+    if(email.value) data._replyto=email.value;
+    try{
+      var ctrl=new AbortController();
+      var timer=setTimeout(function(){ctrl.abort();},10000);
+      fetch('https://formsubmit.co/ajax/2305960967@qq.com',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify(data),signal:ctrl.signal
+      }).then(function(res){
+        return res.json().catch(function(){return null;}).then(function(j){return {ok:res.ok,j:j};});
+      }).then(function(r){
+        clearTimeout(timer);
+        var good=r.ok&&r.j&&(r.j.success==='true'||r.j.success===true);
+        if(!good) fail();
+      }).catch(function(){clearTimeout(timer);fail();});
+    }catch(e){fail();}
+  }
+  function submit(raw){
+    var v=(raw||'').trim();
+    if(!v) return;
+    push('me',v);
+    text.value='';grow();
+    if(!replied){replied=true;push('bot',T.reply);hideQuick();}
+    dismissPop(false);
+    showToast(T.toastSent);
+    if(!document.body.classList.contains('chat-open')) setBadge(unread+1);
+    deliver();
+  }
+  function grow(){text.style.height='42px';text.style.height=Math.min(text.scrollHeight,96)+'px';}
+  function open(model){
+    document.body.classList.add('chat-open');
+    dismissPop(true);
+    setBadge(0);
+    document.body.classList.remove('inq-near');
+    launch.setAttribute('aria-expanded','true');
+    if(model){
+      curModel=model;showModel(model);
+      if(!text.value.trim()) text.value=T.preA+model+T.preB;
+      grow();save();
+    }
+    setTimeout(function(){text.focus({preventScroll:true});body.scrollTop=body.scrollHeight;},230);
+  }
+  function close(){
+    document.body.classList.remove('chat-open');
+    launch.setAttribute('aria-expanded','false');
+  }
+
+  var pop=document.getElementById('chatPop'), popGo=document.getElementById('chatPopGo');
+  var popX=document.getElementById('chatPopX'), badge=document.getElementById('chatBadge');
+  var toast=document.getElementById('chatToast');
+  var unread=0, toastTimer=null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent=msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer=setTimeout(function(){toast.classList.remove('show');},2800);
+  }
+  function setBadge(n){
+    unread=n;
+    if(!badge) return;
+    badge.textContent=n>99?'99+':String(n);
+    badge.classList.toggle('show',n>0);
+  }
+  function dismissPop(remember){
+    if(!pop) return;
+    pop.classList.remove('show');
+    if(remember){try{sessionStorage.setItem('galileo_pop_seen','1');}catch(e){}}
+  }
+  function maybePop(){
+    if(!pop || document.body.classList.contains('chat-open')) return;
+    if(msgs.some(function(m){return m.role==='me';})) return;
+    try{if(sessionStorage.getItem('galileo_pop_seen')==='1') return;}catch(e){}
+    setTimeout(function(){
+      if(document.body.classList.contains('chat-open')) return;
+      if(msgs.some(function(m){return m.role==='me';})) return;
+      pop.classList.add('show');
+    },6500);
+  }
+  window.GalileoChat={open:open,close:close};
+
+  if(popGo) popGo.addEventListener('click',function(){dismissPop(true);open('');});
+  if(popX) popX.addEventListener('click',function(){dismissPop(true);});
+  launch.addEventListener('click',function(){
+    if(document.body.classList.contains('chat-open')) close(); else open('');
+  });
+  document.getElementById('chatClose').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&document.body.classList.contains('chat-open')) close();
+  });
+  sendBtn.addEventListener('click',function(){submit(text.value);});
+  text.addEventListener('keydown',function(e){
+    if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();submit(text.value);}
+  });
+  text.addEventListener('input',grow);
+  email.addEventListener('input',function(){save();if(down)updateMail();});
+  T.quick.forEach(function(q){
+    var b=document.createElement('button');b.type='button';b.textContent=q;
+    b.addEventListener('click',function(){submit(q);});
+    quick.appendChild(b);
+  });
+  var toForm=document.getElementById('chatToForm');
+  if(toForm) toForm.addEventListener('click',function(){close();});
+  load();paint();
+  maybePop();
+})();
+</script>
+<script>
+(function(){
+  var ZH=false;
+  var I=ZH?{
+    crumb:'首页 / 全品类目录', h1:'飞利浦全品类产品目录',
+    lead:'按品类浏览、搜型号，点开任意产品查看核心卖点和参数。看中哪款？点「咨询这款」直接把型号发给业务同事。',
+    s1:'12 大类',s2:'47 个细分品类',s3:'564 款产品',
+    searchPh:'搜索型号 / 关键词，例如 HD9880、咖啡机…', catLabel:'大类',subLabel:'细分',
+    photo:'仅看有图', more:'加载更多产品', all:'全部', allSub:'全部细分',
+    count:'显示 {a} / {b} 款', emptyT:'没有找到匹配的产品', emptyB:'换个型号或关键词试试，也可以清除筛选条件。',
+    ask:'咨询这款', specs:'产品参数', points:'核心卖点', noImg:'暂无图片',
+    pre:'我想咨询这款产品：', home:'返回首页', product:'产品'
+  }:{
+    crumb:'HOME / FULL CATALOG', h1:'Philips Full-Range Catalog',
+    lead:'Browse by category, search a model number, then tap any product to see its key features and specifications. Need a quote? Send the model straight to our sales team.',
+    s1:'12 categories',s2:'47 subcategories',s3:'564 models',
+    searchPh:'Search model / keyword, e.g. HD9880, coffee…', catLabel:'Category',subLabel:'Type',
+    photo:'With photo only', more:'Load more products', all:'All', allSub:'All types',
+    count:'Showing {a} of {b}', emptyT:'No matching products', emptyB:'Try another model or keyword, or clear the filters.',
+    ask:'Enquire', specs:'Specifications', points:'Key features', noImg:'No image',
+    pre:'I would like to enquire about: ', home:'Back to home', product:'Product'
+  };
+  document.querySelectorAll('[data-i]').forEach(function(el){if(I[el.dataset.i])el.textContent=I[el.dataset.i];});
+  document.getElementById('catQ').placeholder=I.searchPh;
+  var CATS={
+    '厨房小电':'Kitchen Appliances','空气处理':'Air Treatment','取暖与热水':'Heating & Hot Water',
+    '数码影音':'Digital & Audio','个护与美妆':'Personal Care & Beauty','衣物护理':'Garment Care',
+    '杯壶与婴童':'Bottles & Baby','健康与按摩':'Health & Massage','清洁电器':'Cleaning Appliances',
+    '照明与智能家居':'Lighting & Smart Home','健身器材':'Fitness Equipment','其他产品':'Other Products',
+    '空气炸锅与蒸烤锅':'Air Fryers & Convection Ovens','电饭煲与电压力锅':'Rice Cookers & Pressure Cookers',
+    '茶吧机与饮水机':'Water Dispensers','制冰机与气泡水机':'Ice Makers & Soda Makers',
+    '净饮机与净水器':'Water Purifiers','电热水壶':'Electric Kettles','电火锅与料理锅':'Electric Hot Pots',
+    '搅拌榨汁机':'Blenders & Juicers','咖啡机':'Coffee Machines','电风扇与塔扇':'Fans & Tower Fans',
+    '空调扇':'Air Coolers','空气循环扇':'Air Circulators','空气净化器':'Air Purifiers',
+    '净化除湿一体机':'Purifier-Dehumidifiers','除湿机':'Dehumidifiers','加湿器':'Humidifiers',
+    '取暖器与暖风机':'Heaters & Fan Heaters','暖手暖脚与发热服饰':'Hand/Foot Warmers & Heated Wear',
+    '电热毯与发热盖毯':'Electric Blankets & Throws','电热水器':'Electric Water Heaters',
+    '充电宝':'Power Banks','电脑与手机配件':'Computer & Mobile Accessories',
+    '电视投影与显示':'TVs, Projectors & Displays','CD机与随身听':'CD Players & Walkmans',
+    '蓝牙音箱与收音机':'Speakers & Radios','蓝牙耳机':'Bluetooth Earphones',
+    '电动剃须刀':'Electric Shavers','电动牙刷':'Electric Toothbrushes',
+    '美容仪与脱毛仪':'Beauty Devices & Hair Removal','电吹风':'Hair Dryers',
+    '挂烫机':'Garment Steamers','电熨斗':'Irons','毛球修剪器与刷鞋器':'Fabric Shavers & Shoe Brushes',
+    '保温杯壶':'Insulated Bottles','儿童杯壶':"Kids' Bottles & Cups",'婴童用品':'Baby Care',
+    '按摩器':'Massagers','筋膜枪':'Massage Guns','红光治疗仪':'Red Light Therapy',
+    '足浴盆':'Foot Baths','洗拖一体机':'Wash & Vacuum Cleaners','吸尘器':'Vacuum Cleaners',
+    '护眼照明':'Eye-Care Lighting','智能马桶盖':'Smart Toilet Seats','健康监测':'Health Monitoring',
+    '跑步机与健身车':'Treadmills & Exercise Bikes'
+  };
+  function L(v){return (ZH||!CATS[v])?v:CATS[v];}
+  var SPEC={'型号':'Model','产品型号':'Model','容量':'Capacity','净重':'Net weight','尺寸(mm)':'Dimensions (mm)','尺寸':'Dimensions','额定电压':'Rated voltage','额定功率':'Rated power','功率':'Power','颜色':'Color','电线长度':'Cord length','水箱容量':'Tank capacity','加水模式':'Water filling','风速':'Speed','重量':'Weight','材质':'Material','电池容量':'Battery capacity','续航时间':'Runtime','充电时间':'Charging time','频率':'Frequency','电压':'Voltage','噪音':'Noise','档位':'Settings','适用面积':'Coverage','LED芯片功率':'LED power','抗摔高度':'Drop resistance','照明模式':'Lighting mode'};
+  function LSpec(k){return (ZH||!SPEC[k])?k:SPEC[k];}
+  var D=window.CATALOG||{products:[],categories:[]}, ALL=D.products||[];
+  var IMG=ZH?'../':'';
+  var cat='', sub='', q='', photoOnly=false, shown=24;
+  var $=function(id){return document.getElementById(id);};
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function chip(text,val,active,count){
+    var b=document.createElement('button');b.type='button';b.className='cat-chip'+(active?' on':'');
+    b.textContent=L(text)+(count!=null?'  '+count:'');
+    b.addEventListener('click',function(){});
+    return b;
+  }
+  function renderCats(){
+    var box=$('catCats');box.innerHTML='';
+    var counts={};ALL.forEach(function(p){counts[p.cat]=(counts[p.cat]||0)+1;});
+    var all=chip(I.all,null,!cat,ALL.length);
+    all.addEventListener('click',function(){cat='';sub='';renderCats();renderSubs();apply(true);});
+    box.appendChild(all);
+    (D.categories||[]).forEach(function(c){
+      if(!counts[c])return;
+      var b=chip(c,c,cat===c,counts[c]);
+      b.addEventListener('click',function(){cat=(cat===c?'':c);sub='';renderCats();renderSubs();apply(true);});
+      box.appendChild(b);
+    });
+  }
+  function renderSubs(){
+    var row=$('catSubRow'), box=$('catSubs');box.innerHTML='';
+    if(!cat){row.classList.remove('show');return;}
+    row.classList.add('show');
+    var list=[],counts={};
+    ALL.forEach(function(p){if(p.cat===cat){if(list.indexOf(p.sub)<0)list.push(p.sub);counts[p.sub]=(counts[p.sub]||0)+1;}});
+    var all=chip(I.allSub,null,!sub,null);
+    all.addEventListener('click',function(){sub='';renderSubs();apply(true);});
+    box.appendChild(all);
+    list.forEach(function(s){
+      var b=chip(s,s,sub===s,counts[s]);
+      b.addEventListener('click',function(){sub=(sub===s?'':s);renderSubs();apply(true);});
+      box.appendChild(b);
+    });
+  }
+  function match(p){
+    if(cat&&p.cat!==cat)return false;
+    if(sub&&p.sub!==sub)return false;
+    if(photoOnly&&!p.img)return false;
+    if(q){
+      var hay=[p.model,p.name,p.cat,p.sub,L(p.cat),L(p.sub)].concat(p.points||[]).concat((p.specs||[]).map(function(s){return s.k+' '+s.v;})).join(' ').toLowerCase();
+      if(hay.indexOf(q)<0)return false;
+    }
+    return true;
+  }
+  function card(p){
+    var d=document.createElement('div');d.className='pc-card';
+    var th=document.createElement('div');th.className='pc-thumb';
+    if(p.img){var im=document.createElement('img');im.src=IMG+p.img;im.alt=p.model;im.loading='lazy';th.appendChild(im);}
+    else{var sp=document.createElement('span');sp.textContent=(p.model||'?').slice(0,5);th.appendChild(sp);}
+    var b=document.createElement('div');b.className='pc-body';
+    var m=document.createElement('div');m.className='pc-model';m.textContent=p.model||I.product;
+    var n=document.createElement('div');n.className='pc-name';n.textContent=p.name;
+    var pt=document.createElement('div');pt.className='pc-point';pt.textContent=(!ZH&&p.specs&&p.specs.length)?p.specs.slice(0,2).map(function(s){return LSpec(s.k)+' '+s.v;}).join(' · '):((p.points&&p.points.length)?p.points.filter(function(x,i){return i%2===1;}).slice(0,2).join(' · '):(p.specs&&p.specs.length?p.specs.slice(0,2).map(function(s){return LSpec(s.k)+' '+s.v;}).join(' · '):L(p.sub)));
+    var c=document.createElement('div');c.className='pc-cat';c.textContent=L(p.cat)+' · '+L(p.sub);
+    b.appendChild(m);b.appendChild(n);b.appendChild(pt);b.appendChild(c);
+    var ask=document.createElement('button');ask.type='button';ask.className='pc-ask';ask.title=I.ask;
+    ask.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>';
+    ask.addEventListener('click',function(e){e.stopPropagation();enquire(p);});
+    d.appendChild(th);d.appendChild(b);d.appendChild(ask);
+    d.addEventListener('click',function(){openDetail(p);});
+    return d;
+  }
+  function apply(reset){
+    if(reset)shown=24;
+    var arr=ALL.filter(match), grid=$('catGrid');grid.innerHTML='';
+    $('catCount').textContent=I.count.replace('{a}',Math.min(shown,arr.length)).replace('{b}',arr.length);
+    if(!arr.length){
+      var e=document.createElement('div');e.className='cat-empty';e.style.gridColumn='1/-1';
+      e.innerHTML='<strong>'+I.emptyT+'</strong>'+I.emptyB;grid.appendChild(e);$('catMore').style.display='none';return;
+    }
+    arr.slice(0,shown).forEach(function(p){grid.appendChild(card(p));});
+    $('catMore').style.display=arr.length>shown?'block':'none';
+  }
+  function openDetail(p){
+    var h='<div class="pm-top"><div class="pm-img">';
+    h+=p.img?'<img src="'+IMG+esc(p.img)+'" alt="'+esc(p.model)+'">':'<span>'+esc((p.model||'?').slice(0,5))+'</span>';
+    h+='</div><div><div class="pm-kicker">'+esc(L(p.cat))+' · '+esc(L(p.sub))+'</div><div class="pm-model">'+esc(p.model||I.product)+'</div>';
+    h+='<div class="pm-name">'+esc(p.name)+'</div>';
+    if(p.points&&p.points.length){
+      h+='<div class="pm-kicker">'+I.points+(ZH?'':' (CN)')+'</div><ul class="pm-points">';
+      p.points.forEach(function(x){h+='<li>'+esc(x)+'</li>';});h+='</ul>';
+    }
+    h+='</div></div>';
+    if(p.specs&&p.specs.length){
+      h+='<div class="pm-sec"><h3>'+I.specs+'</h3><div class="pm-spec">';
+      p.specs.forEach(function(s){h+='<div><b>'+esc(LSpec(s.k))+'</b><span>'+esc(s.v)+'</span></div>';});h+='</div></div>';
+    }
+    h+='<div class="pm-foot"><button class="btn btn-red" type="button" id="pmAsk">'+I.ask+' →</button></div>';
+    $('pmContent').innerHTML=h;
+    $('pmWrap').classList.add('show');document.body.style.overflow='hidden';
+    $('pmAsk').addEventListener('click',function(){enquire(p);});
+  }
+  function closeDetail(){$('pmWrap').classList.remove('show');document.body.style.overflow='';}
+  function enquire(p){
+    closeDetail();
+    if(window.GalileoChat)window.GalileoChat.open((p.model||'')+(p.name?' — '+p.name:''));
+  }
+  $('pmClose').addEventListener('click',closeDetail);
+  $('pmWrap').addEventListener('click',function(e){if(e.target===$('pmWrap'))closeDetail();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')$('pmWrap').classList.contains('show')&&closeDetail();});
+  var timer=null;
+  $('catQ').addEventListener('input',function(){
+    var v=this.value;$('catClear').classList.toggle('show',!!v);
+    clearTimeout(timer);timer=setTimeout(function(){q=v.trim().toLowerCase();apply(true);},120);
+  });
+  $('catClear').addEventListener('click',function(){$('catQ').value='';q='';this.classList.remove('show');apply(true);});
+  $('catPhoto').addEventListener('click',function(){photoOnly=!photoOnly;this.classList.toggle('on',photoOnly);apply(true);});
+  $('catMore').addEventListener('click',function(){shown+=24;apply(false);});
+  renderCats();renderSubs();apply(true);
+})();
+</script>
+</body>
+</html>
