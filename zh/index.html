@@ -287,6 +287,27 @@ body.chat-open .chat-panel{opacity:1;visibility:visible;transform:none}
 .chat-alert a{display:table;margin-top:7px;background:var(--red);color:#fff;border-radius:7px;padding:6px 11px;font-size:12px;font-weight:700}
 body.chat-open .fab-inquiry{opacity:0;visibility:hidden;pointer-events:none}
 button.fab-inquiry{border:none;cursor:pointer;font-family:inherit;line-height:1.2}
+
+/* proactive message popup + unread badge + send toast */
+.chat-pop{position:fixed;right:22px;bottom:94px;z-index:95;width:322px;max-width:calc(100vw - 28px);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);padding:14px 15px 13px;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .25s,transform .25s,visibility .25s}
+.chat-pop.show{opacity:1;visibility:visible;transform:none}
+.chat-pop-hd{display:flex;align-items:center;gap:9px;margin-bottom:9px}
+.chat-pop-hd .chat-avatar{width:32px;height:32px;font-size:14px}
+.chat-pop-hd strong{font-size:13.5px;display:block;line-height:1.3}
+.chat-pop-hd span{font-size:11px;color:var(--slate);display:flex;align-items:center;gap:5px;font-weight:600}
+.chat-pop p{font-size:13px;line-height:1.6;color:var(--ink);margin:0 0 12px}
+.chat-pop-act{display:flex;gap:8px;align-items:center}
+.chat-pop-act .btn{flex:1;justify-content:center;font-size:13px;padding:9px 14px}
+.chat-pop-x{border:none;background:transparent;color:var(--slate);font-size:18px;line-height:1;cursor:pointer;padding:4px 8px;font-family:inherit}
+.chat-pop-x:hover{color:var(--ink)}
+.chat-pop-x:active{transform:scale(.92)}
+.chat-badge{position:absolute;top:-6px;right:-6px;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:#e0a83a;color:#fff;font-size:11px;font-weight:800;line-height:18px;text-align:center;box-shadow:0 0 0 2px #fff;display:none}
+.chat-badge.show{display:block}
+.chat-toast{position:fixed;left:50%;top:80px;transform:translate(-50%,-12px);z-index:120;background:var(--coffee-deep);color:#fff;border-radius:999px;padding:9px 18px;font-size:13px;font-weight:700;box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s;pointer-events:none;white-space:nowrap;max-width:calc(100vw - 28px);overflow:hidden;text-overflow:ellipsis}
+.chat-toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+@media(max-width:680px){
+  .chat-pop{right:10px;left:10px;bottom:calc(76px + env(safe-area-inset-bottom));width:auto;max-width:none}
+}
 @media(max-width:680px){
   .chat-panel{right:0;left:0;bottom:0;top:0;width:100%;max-width:none;height:100%;height:100dvh;border-radius:0;border:none}
   .chat-head{padding-top:calc(14px + env(safe-area-inset-top))}
@@ -928,7 +949,12 @@ button.fab-inquiry{border:none;cursor:pointer;font-family:inherit;line-height:1.
   <div class="foot-bottom container">© 2026 伽利略 Galileo · 浙江杭州 · 保留所有权利</div>
 </footer>
 
-<button class="fab-inquiry" id="chatLaunch" aria-label="打开在线咨询窗口" aria-expanded="false" aria-controls="chatPanel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg><span>在线咨询</span></button>
+<div class="chat-pop" id="chatPop" role="status" aria-live="polite">
+  <div class="chat-pop-hd"><div class="chat-avatar">G</div><div><strong>伽利略业务团队</strong><span><i class="chat-live"></i>在线接待中</span></div></div>
+  <p>想了解报价、参数或寄样？直接在这里留言，我们会尽快回复您。</p>
+  <div class="chat-pop-act"><button class="btn btn-red" id="chatPopGo" type="button">开始咨询</button><button class="chat-pop-x" id="chatPopX" aria-label="关闭">&times;</button></div>
+</div>
+<button class="fab-inquiry" id="chatLaunch" aria-label="打开在线咨询窗口" aria-expanded="false" aria-controls="chatPanel"><b class="chat-badge" id="chatBadge"></b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg><span>在线咨询</span></button>
 <div class="chat-panel" id="chatPanel" role="dialog" aria-label="打开在线咨询窗口">
   <div class="chat-head">
     <div class="chat-avatar">G</div>
@@ -948,6 +974,7 @@ button.fab-inquiry{border:none;cursor:pointer;font-family:inherit;line-height:1.
     <div class="chat-alt">也可以直接发邮件 <a href="mailto:2305960967@qq.com" data-direct="1">2305960967@qq.com</a> · <a href="#inquiry" id="chatToForm">填写详细询盘表</a></div>
   </div>
 </div>
+<div class="chat-toast" id="chatToast" role="status" aria-live="polite"></div>
 <button class="backtop" id="backTop" aria-label="返回顶部">↑</button>
 
 <script>
@@ -1098,7 +1125,8 @@ fbtns.forEach(b=>b.addEventListener('click',()=>{
     alert:'在线通道暂不可用，点下方按钮把整段对话用邮件发给我们。',
     alertBtn:'用邮件发送这段对话',
     subj:'[伽利略在线聊天] ',
-    visitor:'网站访客', customer:'客户', us:'伽利略', page:'页面'
+    visitor:'网站访客', customer:'客户', us:'伽利略', page:'页面',
+    toastSent:'消息已发送，我们会尽快回复你'
   }:{
     welcome:'Hi, welcome to Galileo. Ask us about Philips appliances, the C5 cleaning robot, OEM branding, samples or shipping — just type here.',
     quick:['Send me the product catalog','Ask about MOQ and lead time','OEM / ODM branding','About the C5 cleaning robot'],
@@ -1108,7 +1136,8 @@ fbtns.forEach(b=>b.addEventListener('click',()=>{
     alert:'The online channel is unavailable right now. Your conversation is kept in this window — use the button below to email the whole chat to us.',
     alertBtn:'Email this conversation',
     subj:'[Galileo Live Chat] ',
-    visitor:'Website visitor', customer:'Visitor', us:'Galileo', page:'Page'
+    visitor:'Website visitor', customer:'Visitor', us:'Galileo', page:'Page',
+    toastSent:'Message sent — we will reply shortly'
   };
   var KEY='galileo_chat_v1';
   var launch=document.getElementById('chatLaunch'), panel=document.getElementById('chatPanel');
@@ -1200,11 +1229,16 @@ fbtns.forEach(b=>b.addEventListener('click',()=>{
     push('me',v);
     text.value='';grow();
     if(!replied){replied=true;push('bot',T.reply);hideQuick();}
+    dismissPop(false);
+    showToast(T.toastSent);
+    if(!document.body.classList.contains('chat-open')) setBadge(unread+1);
     deliver();
   }
   function grow(){text.style.height='42px';text.style.height=Math.min(text.scrollHeight,96)+'px';}
   function open(model){
     document.body.classList.add('chat-open');
+    dismissPop(true);
+    setBadge(0);
     document.body.classList.remove('inq-near');
     launch.setAttribute('aria-expanded','true');
     if(model){
@@ -1218,8 +1252,43 @@ fbtns.forEach(b=>b.addEventListener('click',()=>{
     document.body.classList.remove('chat-open');
     launch.setAttribute('aria-expanded','false');
   }
+
+  var pop=document.getElementById('chatPop'), popGo=document.getElementById('chatPopGo');
+  var popX=document.getElementById('chatPopX'), badge=document.getElementById('chatBadge');
+  var toast=document.getElementById('chatToast');
+  var unread=0, toastTimer=null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent=msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer=setTimeout(function(){toast.classList.remove('show');},2800);
+  }
+  function setBadge(n){
+    unread=n;
+    if(!badge) return;
+    badge.textContent=n>99?'99+':String(n);
+    badge.classList.toggle('show',n>0);
+  }
+  function dismissPop(remember){
+    if(!pop) return;
+    pop.classList.remove('show');
+    if(remember){try{sessionStorage.setItem('galileo_pop_seen','1');}catch(e){}}
+  }
+  function maybePop(){
+    if(!pop || document.body.classList.contains('chat-open')) return;
+    if(msgs.some(function(m){return m.role==='me';})) return;
+    try{if(sessionStorage.getItem('galileo_pop_seen')==='1') return;}catch(e){}
+    setTimeout(function(){
+      if(document.body.classList.contains('chat-open')) return;
+      if(msgs.some(function(m){return m.role==='me';})) return;
+      pop.classList.add('show');
+    },6500);
+  }
   window.GalileoChat={open:open,close:close};
 
+  if(popGo) popGo.addEventListener('click',function(){dismissPop(true);open('');});
+  if(popX) popX.addEventListener('click',function(){dismissPop(true);});
   launch.addEventListener('click',function(){
     if(document.body.classList.contains('chat-open')) close(); else open('');
   });
@@ -1241,6 +1310,7 @@ fbtns.forEach(b=>b.addEventListener('click',()=>{
   var toForm=document.getElementById('chatToForm');
   if(toForm) toForm.addEventListener('click',function(){close();});
   load();paint();
+  maybePop();
 })();
 </script>
 </body>
